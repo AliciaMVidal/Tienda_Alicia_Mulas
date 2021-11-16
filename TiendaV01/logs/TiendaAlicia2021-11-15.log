@@ -1,0 +1,234 @@
+[2021-11-15 09:11:30] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 09:11:42] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 09:11:44] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 29
+[2021-11-15 09:11:44] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 09:11:50] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 09:12:13] [ INFO ] [LoginController:64]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 09:12:13] [ INFO ] [LoginController:69]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 09:12:13] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 09:12:48] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:12:54] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:14:47] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:23:47] [ WARN ] [AdministracionController:40]  >>>>>> Un cliente ha intentado acceder a la administracion: 
+[2021-11-15 09:23:47] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:23:55] [ INFO ] [LoginController:64]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 09:23:55] [ INFO ] [LoginController:66]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 09:23:55] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 09:27:11] [ INFO ] [AdministracionPedidoController:54]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 09:27:17] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:27:22] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:29:24] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:30:26] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:30:35] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:32:43] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:33:47] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:34:53] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:34:53] [ WARN ] [LoginController:201]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 09:36:25] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:36:26] [ WARN ] [LoginController:201]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 09:36:54] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:36:54] [ WARN ] [LoginController:201]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 09:36:58] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:36:58] [ WARN ] [LoginController:201]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 09:37:00] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 09:37:00] [ WARN ] [LoginController:201]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 09:37:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:38:19] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:39:45] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:42:08] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:44:06] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:47:04] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:48:35] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:55:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:55:45] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:56:24] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 09:57:24] [ INFO ] [LoginController:104]  >>>>>> Usuario nuevo registrado: cliente20@tienda.es
+[2021-11-15 09:57:40] [ WARN ] [LoginController:205]  >>>>>>Enviando meail javax.mail.MessagingException: Could not convert socket to TLS;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)
+[2021-11-15 10:25:24] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:28:05] [ INFO ] [LoginController:64]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 10:28:05] [ INFO ] [LoginController:69]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 10:28:05] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:28:56] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:28:58] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 29
+[2021-11-15 10:28:58] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:29:03] [ INFO ] [InicioController:81]  >>>>>> Busqueda por: Precio:Caro
+[2021-11-15 10:29:07] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 30
+[2021-11-15 10:29:07] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:29:10] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 10:29:22] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:29:24] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 39
+[2021-11-15 10:29:24] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:29:25] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 10:29:54] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 10:30:22] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:30:24] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 10:30:40] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 10:31:14] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:31:44] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:31:46] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:32:50] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:32:52] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:33:13] [ INFO ] [LoginController:64]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 10:33:13] [ INFO ] [LoginController:69]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 10:33:13] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:33:25] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 10:33:25] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:33:27] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:33:30] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:33:37] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:33:44] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:37:00] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 10:37:00] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 10:37:00] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:42:13] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 10:42:13] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:42:15] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:42:20] [ INFO ] [LoginController:63]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 10:42:20] [ INFO ] [LoginController:65]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 10:42:20] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 10:42:24] [ INFO ] [AdministracionPedidoController:54]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 10:42:26] [ INFO ] [AdministracionPedidoController:88]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 10:42:26] [ INFO ] [AdministracionPedidoController:54]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 10:43:59] [ INFO ] [LoginController:78]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 10:46:00] [ INFO ] [LoginController:78]  >>>>>> Cargando formulario de registro: 
+[2021-11-15 10:47:44] [ INFO ] [LoginController:103]  >>>>>> Usuario nuevo registrado: cliente4@tienda.es
+[2021-11-15 10:47:44] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:48:45] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:48:49] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 10:48:49] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 10:48:49] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:48:58] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 10:48:58] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:48:59] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:49:05] [ INFO ] [LoginController:63]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 10:49:05] [ INFO ] [LoginController:65]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 10:49:05] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 10:49:14] [ INFO ] [AdministracionPedidoController:54]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 10:49:16] [ INFO ] [AdministracionPedidoController:88]  >>>>>> El pedido: 18 ha sido enviado
+[2021-11-15 10:49:16] [ INFO ] [AdministracionPedidoController:54]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 10:49:20] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:49:23] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 10:49:23] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 10:49:24] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 10:49:29] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 10:49:29] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 10:49:29] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 12:06:38] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 12:06:38] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 12:06:40] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 12:06:44] [ INFO ] [LoginController:63]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 12:06:44] [ INFO ] [LoginController:65]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 12:06:44] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 12:17:10] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 12:17:11] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 12:17:11] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 12:17:12] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 12:17:18] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 12:17:18] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 12:17:18] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 20:08:54] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 20:09:09] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 20:09:09] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 20:09:09] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 20:45:47] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 21:31:38] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 21:31:38] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 21:31:40] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 21:31:46] [ INFO ] [LoginController:63]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 21:31:46] [ INFO ] [LoginController:65]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 21:31:46] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 21:31:48] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:31:51] [ INFO ] [AdministracionPedidoController:95]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 21:31:51] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:26] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:28] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:34] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:35] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:41] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:32:43] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:33:12] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:33:16] [ INFO ] [AdministracionPedidoController:96]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 21:33:16] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:33:40] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:33:44] [ INFO ] [AdministracionPedidoController:96]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 21:33:44] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:34:34] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:34:38] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:34:42] [ INFO ] [AdministracionPedidoController:97]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 21:34:42] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:36:20] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:36:25] [ INFO ] [AdministracionPedidoController:99]  >>>>>> El pedido: 17 ha sido enviado
+[2021-11-15 21:36:25] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:36:41] [ INFO ] [AdministracionPedidoController:99]  >>>>>> El pedido: 18 ha sido enviado
+[2021-11-15 21:36:41] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 21:39:20] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 21:39:22] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 21:39:22] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 21:39:22] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 21:39:31] [ INFO ] [LoginController:63]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-15 21:39:31] [ INFO ] [LoginController:68]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-15 21:39:31] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:14:57] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 22:14:57] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:14:59] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-15 22:15:05] [ INFO ] [LoginController:63]  >>>>>> Intento de login: admin@tienda.es
+[2021-11-15 22:15:05] [ INFO ] [LoginController:65]  >>>>>> Login correcto: admin@tienda.es
+[2021-11-15 22:15:05] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:33:03] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:33:07] [ INFO ] [InicioController:97]  >>>>>> Busqueda por: Perro
+[2021-11-15 22:33:11] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:33:32] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:33:40] [ INFO ] [AdministracionPedidoController:58]  >>>>>> Cargando la lista de pedidos
+[2021-11-15 22:33:41] [ INFO ] [CategoriaController:51]  >>>>>> Cargando la lista de categorias
+[2021-11-15 22:33:43] [ INFO ] [EmpleadoController:47]  >>>>>> Cargando la lista de empleados
+[2021-11-15 22:34:32] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:35:26] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:35:41] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:35:53] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:07] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:08] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:10] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:11] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:12] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:17] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:24] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:37] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:56] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:36:57] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:37:01] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:37:34] [ INFO ] [AdministracionController:50]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-15 22:37:35] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-15 22:37:35] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:38:07] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:38:37] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:39:01] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:39:02] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 22:39:19] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:39:21] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:39:22] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 22:39:26] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:41:40] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:42:10] [ INFO ] [InicioController:145]  >>>>>> Ir a la vista del producto: 31
+[2021-11-15 22:42:14] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:42:27] [ INFO ] [InicioController:145]  >>>>>> Ir a la vista del producto: 31
+[2021-11-15 22:42:31] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:43:02] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 22:43:04] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:43:06] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:43:09] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:43:12] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 33
+[2021-11-15 22:43:12] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-15 22:43:14] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-15 22:43:29] [ INFO ] [LoginController:78]  >>>>>> Cargando formulario de registro: 

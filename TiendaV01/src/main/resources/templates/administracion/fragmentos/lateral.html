@@ -1,0 +1,22 @@
+   <aside class="left-sidebar" data-sidebarbg="skin6" th:fragment="menulateral">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li class="sidebar-item pt-2" th:each="opcionesmenu : ${listaOpciones}">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"  th:href="@{${opcionesmenu.url_opcion}}"
+                                aria-expanded="false">
+                                <i class="fas fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu" th:text="${opcionesmenu.nombre_opcion}">Inicio</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>

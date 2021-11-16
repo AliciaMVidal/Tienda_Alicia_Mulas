@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Style -->
+   
+    <link rel="stylesheet" th:href="@{../menusuperior/css/style.css}">
+    <link rel="stylesheet" th:href="@{../menusuperior/fonts/icomoon/style.css}">
+	<link th:href="@{../menusuperior/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../menusuperior/css/owl.carousel.min.css}">
+    <link rel="stylesheet" th:href="@{../css/carro.css}">
+    
+    <title>Inicio</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link th:href="@{../css/bootstrap.min.css}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+  <main>
+<div th:replace="/fragmentos/cabecera::menusuperior"></div>
+
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Nombre de la sesion:</h1><h1 class="fw-light" th:text="${session.sesion}">Nombre de la sesion</h1>
+        <p class="lead text-muted">Carrito:</p>
+        <p class="lead text-muted"th:each="producto: ${session.carritosesion}"></p>
+        <div class="lead text-muted" th:each="producto : ${session.carritosesion}">
+        <p><h3 th:text="${producto}">Nombre</h3></p>
+        </div>
+        <p>
+          <a th:href="@{/login}" class="btn btn-primary my-2">Login</a>
+          <a th:href="@{/login/registro}" class="btn btn-secondary my-2">Registro</a>
+        </p>
+      </div>
+    </div>
+  </section>
+	  <div class="album py-5 bg-light" >
+  
+    <div class="container">
+	
+      
+        
+        <!-- aqui??? -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container padding-bottom-3x mb-1">
+    <!-- Alert
+    <div class="alert alert-info alert-dismissible fade show text-center" style="margin-bottom: 30px;"><span class="alert-close" data-dismiss="alert"></span><img class="d-inline align-center" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIuMDAzIDUxMi4wMDMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMi4wMDMgNTEyLjAwMzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8Zz4KCTxnPgoJCTxnPgoJCQk8cGF0aCBkPSJNMjU2LjAwMSw2NGMtNzAuNTkyLDAtMTI4LDU3LjQwOC0xMjgsMTI4czU3LjQwOCwxMjgsMTI4LDEyOHMxMjgtNTcuNDA4LDEyOC0xMjhTMzI2LjU5Myw2NCwyNTYuMDAxLDY0eiAgICAgIE0yNTYuMDAxLDI5OC42NjdjLTU4LjgxNiwwLTEwNi42NjctNDcuODUxLTEwNi42NjctMTA2LjY2N1MxOTcuMTg1LDg1LjMzMywyNTYuMDAxLDg1LjMzM1MzNjIuNjY4LDEzMy4xODQsMzYyLjY2OCwxOTIgICAgIFMzMTQuODE3LDI5OC42NjcsMjU2LjAwMSwyOTguNjY3eiIgZmlsbD0iIzUwYzZlOSIvPgoJCQk8cGF0aCBkPSJNMzg1LjY0NCwzMzMuMjA1YzM4LjIyOS0zNS4xMzYsNjIuMzU3LTg1LjMzMyw2Mi4zNTctMTQxLjIwNWMwLTEwNS44NTYtODYuMTIzLTE5Mi0xOTItMTkycy0xOTIsODYuMTQ0LTE5MiwxOTIgICAgIGMwLDU1Ljg1MSwyNC4xMjgsMTA2LjA2OSw2Mi4zMzYsMTQxLjE4NEw2NC42ODQsNDk3LjZjLTEuNTM2LDQuMTE3LTAuNDA1LDguNzI1LDIuODM3LDExLjY2OSAgICAgYzIuMDI3LDEuNzkyLDQuNTY1LDIuNzMxLDcuMTQ3LDIuNzMxYzEuNjIxLDAsMy4yNDMtMC4zNjMsNC43NzktMS4xMDlsNzkuNzg3LTM5Ljg5M2w1OC44NTksMzkuMjMyICAgICBjMi42ODgsMS43OTIsNi4xMDEsMi4yNCw5LjE5NSwxLjI4YzMuMDkzLTEuMDAzLDUuNTY4LTMuMzQ5LDYuNjk5LTYuNGwyMy4yOTYtNjIuMTQ0bDIwLjU4Nyw2MS43MzkgICAgIGMxLjA2NywzLjE1NywzLjU0MSw1LjYzMiw2LjY3Nyw2LjcyYzMuMTM2LDEuMDY3LDYuNTkyLDAuNjQsOS4zNjUtMS4yMTZsNTguODU5LTM5LjIzMmw3OS43ODcsMzkuODkzICAgICBjMS41MzYsMC43NjgsMy4xNTcsMS4xMzEsNC43NzksMS4xMzFjMi41ODEsMCw1LjEyLTAuOTM5LDcuMTI1LTIuNzUyYzMuMjY0LTIuOTIzLDQuMzczLTcuNTUyLDIuODM3LTExLjY2OUwzODUuNjQ0LDMzMy4yMDV6ICAgICAgTTI0Ni4wMTcsNDEyLjI2N2wtMjcuMjg1LDcyLjc0N2wtNTIuODIxLTM1LjJjLTMuMi0yLjExMi03LjMxNy0yLjM4OS0xMC42ODgtMC42NjFMOTQuMTg4LDQ3OS42OGw0OS41NzktMTMyLjIyNCAgICAgYzI2Ljg1OSwxOS40MzUsNTguNzk1LDMyLjIxMyw5My41NDcsMzUuNjA1TDI0Ni43LDQxMS4yQzI0Ni40ODcsNDExLjU2MywyNDYuMTY3LDQxMS44NCwyNDYuMDE3LDQxMi4yNjd6IE0yNTYuMDAxLDM2Mi42NjcgICAgIEMxNjEuOSwzNjIuNjY3LDg1LjMzNSwyODYuMTAxLDg1LjMzNSwxOTJTMTYxLjksMjEuMzMzLDI1Ni4wMDEsMjEuMzMzUzQyNi42NjgsOTcuODk5LDQyNi42NjgsMTkyICAgICBTMzUwLjEwMywzNjIuNjY3LDI1Ni4wMDEsMzYyLjY2N3ogTTM1Ni43NTksNDQ5LjEzMWMtMy40MTMtMS43MjgtNy41MDktMS40NzItMTAuNjg4LDAuNjYxbC01Mi4zNzMsMzQuOTIzbC0zMy42NDMtMTAwLjkyOCAgICAgYzQwLjM0MS0wLjg1Myw3Ny41ODktMTQuMTg3LDEwOC4xNi0zNi4zMzFsNDkuNTc5LDEzMi4yMDNMMzU2Ljc1OSw0NDkuMTMxeiIgZmlsbD0iIzUwYzZlOSIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" width="18" height="18" alt="Medal icon">&nbsp;&nbsp;With this purchase you will earn <strong>290</strong> Reward Points.</div>
+   -->
+    <!-- Shopping Cart-->
+
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Tu compra</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Product name</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="text-muted">$12</span>
+        </li>
+   
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (USD)</span>
+          <strong>$20</strong>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Dirección de envío</h4>
+      <form class="needs-validation" th:action="@{/compra/metodopago}" th:object="${usuario}"  method="post">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="firstName">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" th:field="*{nombre}" placeholder="Nombre" value="" required>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="lastName">Primer apellido</label>
+            <input type="text" class="form-control" id="apellido1" name="apellido1" th:field="*{apellido1}" placeholder="Primer apellido" value="" required>
+          </div>
+           <div class="col-md-4 mb-3">
+            <label for="lastName">Segundo apellido</label>
+            <input type="text" class="form-control" id="apellido2" name="apellido2" th:field="*{apellido2}" placeholder="Segundo apellido" value="" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" th:field="*{email}" placeholder="you@example.com" required>
+         
+        </div>
+
+        <div class="mb-3">
+          <label for="address">Dirección</label>
+          <input type="text" class="form-control" id="direccion" name="direccion" th:field="*{direccion}" placeholder="Direccion" required>
+        </div>
+
+  
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="country">Provincia</label>
+                <input type="text" class="form-control" id="provincia" name="provincia" th:field="*{provincia}" placeholder="Provincia" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="state">Municipio</label>
+            <input type="text" class="form-control" id="municipio" name ="municipio" th:field="*{municipio}" placeholder="Municipio" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="zip">Dni</label>
+            <input type="text" class="form-control" id="dni" name="dni" th:field="*{dni}" placeholder="Dni" required>
+          </div>
+           <div class="col-md-6 mb-3">
+            <label for="zip">Telefono</label>
+            <input type="text" class="form-control" id="telefono" name="telefono" th:field="*{telefono}" placeholder="Telefono" required>
+          </div>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Metodo de pago</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="tarjeta" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="tarjeta">Tarjeta</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+     
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block"  type="submit">Proceder al pago</button>
+      </form>
+    </div>
+  </div>
+ 
+    
+</div>
+        
+        
+      </div>
+    </div>
+  
+
+
+</main>
+
+<footer  th:replace="/fragmentos/footer::pie"></footer>
+
+    <script th:src="@{../menusuperior/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{../menusuperior/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{../menusuperior/js/popper.min.js}"></script>
+    <script th:src="@{../menusuperior/js/jquery.sticky.js}"></script>
+    <script th:src="@{../menusuperior/js/main.js}"></script>
+  
+
+      
+  </body>
+</html>

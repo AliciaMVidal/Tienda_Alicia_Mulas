@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
+
+               <div class="form-group mb-4" th:field="*{estado}"  >
+                                     <label class="col-md-12 p-0">Cambiar el estado de pedido:</label>
+                                          <div >
+           									 <input id="estado" name="estado" th:field="*{estado}"  value="pendientess" type="radio" required>
+        								    <label for="pendiente">Pendiente</label>
+       								   </div>
+       									   <div >
+      								      <input id="estado" name="estado"  th:field="*{estado}" type="radio"  value="enviado"  required>
+           								 <label  for="enviado">Enviado</label>
+       								   </div>
+      							    </div>
+      							    
+                                     <div class="form-group mb-4">
+                                     <label class="col-md-12 p-0">Cambiar el estado de pedido:</label>
+                                          <div class="custom-control custom-radio">
+           									 <input id="pendiente" name="estado"  type="radio" class="custom-control-input" required>
+        								    <label class="custom-control-label" th:value="pendiente" for="pendiente">Pendiente</label>
+       								   </div>
+       									   <div class="custom-control custom-radio">
+      								      <input id="enviado" name="estado" type="radio" class="custom-control-input" required>
+           								 <label class="custom-control-label" th:value="enviado" for="enviado">Enviado</label>
+       								   </div>
+       								   	   <div class="custom-control custom-radio">
+      								      <input id="cancelado" name="estado"  type="radio"  class="custom-control-input" required>
+           								 <label class="custom-control-label" th:value="cancelado" for="cancelado">Cancelado</label>
+       								   </div>
+      							    </div>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Style -->
+   
+    <link rel="stylesheet" th:href="@{menusuperior/css/style.css}">
+    <link rel="stylesheet" th:href="@{menusuperior/fonts/icomoon/style.css}">
+	<link th:href="@{menusuperior/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{menusuperior/css/owl.carousel.min.css}">
+    <title>Inicio</title>
+
+
+    <!-- Bootstrap core CSS -->
+<link th:href="@{css/bootstrap.min.css}" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+  <main>
+<div th:replace="/fragmentos/cabecera::menusuperior"></div>
+
+
+
+	  <div class="album py-5 bg-light" >
+
+
+</div>
+  <div class="album py-5 bg-light" >
+    <div class="container">
+    
+	
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" >
+        <div class="col" th:each="producto : ${listaProductos}" >
+          <div class="card shadow-sm" >
+            <img class="bd-placeholder-img card-img-top"  th:src="${producto.imagen}"/>
+            <div class="card-body">
+            	<p><h3 hidden th:text="${producto.id}"  name="producto">Nombre</h3></p>
+            	<p><h3 th:text="${producto.nombre}"  name="producto">Nombre</h3>
+            	<h3 th:text="${producto.precio}+€"  name="producto">Precio</h3></p>
+              <p class="card-text" th:text="${producto.descripcion}"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a th:href="@{/carrito/}+${producto.id}"><button type="button" class="btn btn-sm btn-outline-secondary" >Comprar</button></a>
+                  <a th:href="@{/vistaproducto/}+${producto.id}"><button type="button" class="btn btn-sm btn-outline-secondary">Ver</button></a>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</main>
+
+<footer  th:replace="/fragmentos/footer::pie"></footer>
+
+
+    <script th:src="@{menusuperior/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{menusuperior/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{menusuperior/js/popper.min.js}"></script>
+    <script th:src="@{menusuperior/js/jquery.sticky.js}"></script>
+    <script th:src="@{menusuperior/js/main.js}"></script>
+  
+
+      
+  </body>
+</html>

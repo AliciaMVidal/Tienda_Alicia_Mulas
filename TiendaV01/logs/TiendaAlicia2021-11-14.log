@@ -1,0 +1,301 @@
+[2021-11-14 16:22:30] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:23:45] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:23:49] [ INFO ] [InicioController:91]  >>>>>> Busqueda por:
+[2021-11-14 16:24:04] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:24:07] [ INFO ] [InicioController:81]  >>>>>> Busqueda por:
+[2021-11-14 16:24:31] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:24:32] [ INFO ] [InicioController:97]  >>>>>> Busqueda por:
+[2021-11-14 16:24:50] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:24:52] [ INFO ] [InicioController:81]  >>>>>> Busqueda por: Precio:Caro
+[2021-11-14 16:25:19] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:25:21] [ INFO ] [InicioController:97]  >>>>>> Busqueda por: Perro
+[2021-11-14 16:25:31] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada.
+[2021-11-14 16:25:55] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:25:58] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:26:39] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:26:42] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 
+[2021-11-14 16:26:42] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:27:31] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 29
+[2021-11-14 16:27:31] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:28:25] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:28:29] [ INFO ] [InicioController:145]  >>>>>> Ir a la vista del producto: 28
+[2021-11-14 16:28:34] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:28:35] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:28:36] [ INFO ] [InicioController:145]  >>>>>> Ir a la vista del producto: 29
+[2021-11-14 16:28:39] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:30:03] [ INFO ] [AdministracionController:49]  >>>>>> Ir a la administracion: Usuario: admin@tienda.es
+[2021-11-14 16:34:03] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:34:04] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-14 16:34:04] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:34:13] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:34:33] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 16:34:53] [ INFO ] [AdministracionController:40]  >>>>>> Un cliente ha intentado acceder a la administracion: 
+[2021-11-14 16:35:03] [ WARN ] [AdministracionController:40]  >>>>>> Un cliente ha intentado acceder a la administracion: 
+[2021-11-14 19:23:47] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:26:05] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 28
+[2021-11-14 19:26:05] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:26:06] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-14 19:26:19] [ INFO ] [LoginController:54]  >>>>>> Intento de login: cliente@correo.es
+[2021-11-14 19:26:19] [ INFO ] [LoginController:59]  >>>>>> Login correcto: cliente@correo.es
+[2021-11-14 19:26:19] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:26:23] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-14 19:26:24] [ INFO ] [PedidoController:95]  >>>>>> Cargando el metodo de pago
+[2021-11-14 19:26:27] [ INFO ] [PedidoController:150]  >>>>>> Hacer el pago del pedido y terminar el pedido
+[2021-11-14 19:26:27] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:28:21] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:28:24] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 29
+[2021-11-14 19:28:24] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:28:48] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:28:50] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 28
+[2021-11-14 19:28:50] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:29:42] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:29:59] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:30:24] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:30:28] [ INFO ] [InicioController:122]  >>>>>> Se ha añadido al carrito el producto ID: 35
+[2021-11-14 19:30:28] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:30:30] [ INFO ] [PedidoController:65]  >>>>>> Cargando el carrito de la compra
+[2021-11-14 19:30:34] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:41:49] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 19:41:52] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:42:22] [ INFO ] [LoginController:86]  >>>>>> Usuario nuevo registrado: cliente5@tienda.es
+[2021-11-14 19:43:56] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:43:59] [ INFO ] [LoginController:86]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:43:59] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 19:44:37] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:44:48] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: cliente6@tienda.es
+[2021-11-14 19:44:48] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 19:44:57] [ INFO ] [LoginController:53]  >>>>>> Intento de login: cliente6@tienda.es
+[2021-11-14 19:44:57] [ INFO ] [LoginController:58]  >>>>>> Login correcto: cliente6@tienda.es
+[2021-11-14 19:44:57] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:45:00] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-14 19:45:00] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 19:45:02] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 19:45:03] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:45:04] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:45:48] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:45:48] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:45:52] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:45:52] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:45:52] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:45:52] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:46:03] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:46:03] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:46:11] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 19:46:35] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:46:36] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:46:36] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:46:39] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:46:39] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:46:40] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:46:40] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:13] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:15] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:51:15] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:21] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:51:21] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:46] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:47] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:51:47] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:53] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:51:53] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:51:58] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:52:54] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:52:54] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:52:56] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:52:56] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:53:33] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:53:37] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:53:37] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:53:52] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:03] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:04] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:04] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:04] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:22] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:23] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:27] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:54:27] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:54:47] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:55:05] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:55:12] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:55:12] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:55:57] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:56:01] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:56:01] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:56:40] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:56:43] [ INFO ] [LoginController:87]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:56:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:58:59] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:59:04] [ INFO ] [LoginController:88]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:59:04] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:59:20] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:59:23] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:59:23] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 19:59:42] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 19:59:42] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:00:05] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:00:07] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 20:00:07] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:00:08] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 20:00:09] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:00:10] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 20:00:10] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:00:11] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: 
+[2021-11-14 20:00:11] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:01:18] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:01:37] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:02:15] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:03:09] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:04:46] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:04:47] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:05:13] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:05:24] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:05:25] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:07:44] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:08:28] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:08:28] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:10:32] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:10:33] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:13:00] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:13:01] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:13:01] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:13:01] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:13:01] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:41] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:42] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:42] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:42] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:42] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:18:43] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:20:08] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:22:08] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 20:22:09] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:22:18] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: cliente4@tienda.es
+[2021-11-14 20:22:18] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:22:47] [ INFO ] [LoginController:68]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:22:54] [ INFO ] [LoginController:89]  >>>>>> Usuario nuevo registrado: cliente6@tienda.es
+[2021-11-14 20:22:54] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 20:23:01] [ INFO ] [LoginController:36]  >>>>>> Cargando el login
+[2021-11-14 20:23:21] [ INFO ] [LoginController:53]  >>>>>> Intento de login: cliente6@tienda.es
+[2021-11-14 20:23:21] [ INFO ] [LoginController:58]  >>>>>> Login correcto: cliente6@tienda.es
+[2021-11-14 20:23:21] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 20:23:23] [ INFO ] [InicioController:137]  >>>>>> Se ha cerrado la sesion
+[2021-11-14 20:23:23] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 20:28:48] [ INFO ] [InicioController:71]  >>>>>> Tienda iniciada. Index
+[2021-11-14 20:28:50] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:28:51] [ INFO ] [LoginController:76]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:29:11] [ INFO ] [LoginController:97]  >>>>>> Usuario nuevo registrado: cliente3@tienda.es
+[2021-11-14 20:29:24] [ INFO ] [LoginController:76]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:29:35] [ INFO ] [LoginController:97]  >>>>>> Usuario nuevo registrado: cliente3@correo.es
+[2021-11-14 20:29:35] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:31:27] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:33:23] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:33:58] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:35:02] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:35:08] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:35:59] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:40:30] [ INFO ] [LoginController:44]  >>>>>> Cargando el login
+[2021-11-14 20:45:56] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:47:46] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:47:48] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:47:49] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:47:54] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:47:55] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:47:56] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 20:48:11] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:48:51] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:48:53] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:48:58] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:51:31] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:51:36] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:51:36] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:51:37] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:52:27] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:52:47] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:52:48] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:53:36] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:53:37] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:57:43] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:58:12] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 20:58:22] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:01:40] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:02:19] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:02:20] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:28] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:43] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:43] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:44] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:45] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:46] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:46] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:47] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:03:48] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:05:54] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:06:42] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:07:57] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:08:03] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:08:35] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:08:44] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:09:02] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:10:32] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:13:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:13:26] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:13:27] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:13:27] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:14:40] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:14:41] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:14:42] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:14:42] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:20] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:22] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:22] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:39] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:41] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:42] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:42] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:42] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:43] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:44] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:17:44] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:00] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:01] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:02] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:03] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:04] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:04] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:23] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:29] [ INFO ] [LoginController:79]  >>>>>> Cargando formulario de registro: 
+[2021-11-14 21:18:31] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:19:40] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:20:06] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:20:45] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:20:47] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:21:06] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:21:12] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:22:34] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:24:17] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:24:29] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:24:30] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:24:31] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:24:32] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:25:40] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:26:35] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
+[2021-11-14 21:27:04] [ INFO ] [LoginController:45]  >>>>>> Cargando el login
