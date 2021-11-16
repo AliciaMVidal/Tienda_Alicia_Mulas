@@ -68,6 +68,7 @@
                     <div class="card-body">
 <form th:action="@{/perfil/editar/submit}" th:object="${usuario}" class="edit-profile-form" method="POST">
 	 	<input type="hidden"  name="id" id="id" th:field="*{id}"/>
+		<input type="hidden"  name="clave" id="clave" th:field="*{clave}"/>
     <div class="form-group
         required" >
         <label class="form-control-label" for="firstName">
