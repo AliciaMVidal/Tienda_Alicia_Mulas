@@ -2,3 +2,5 @@ Para hacer login:
   -Admin: admin@tienda.es 1234
   -Empleado: empleado@tienda.es 1234
   -Cliente: cliente@correo.es 1234
+Base de datos:
+  -He usado H2 como base de datos, está en memoria 
