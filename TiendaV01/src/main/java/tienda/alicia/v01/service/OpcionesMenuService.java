@@ -32,6 +32,8 @@ public class OpcionesMenuService {
 		opcionesRepository.save(opcionesMenu);
 		opcionesMenu = new OpcionesMenu(1, "Categorias" , "/administracion/categorias");
 		opcionesRepository.save(opcionesMenu);
+		opcionesMenu = new OpcionesMenu(1, "Proveedores", "/administracion/proveedores");
+		opcionesRepository.save(opcionesMenu);
 		opcionesMenu = new OpcionesMenu(2, "Inicio" , "/administracion");
 		opcionesRepository.save(opcionesMenu);
 		opcionesMenu = new OpcionesMenu(2, "Usuarios" , "/administracion/usuarios");
@@ -51,5 +53,13 @@ public class OpcionesMenuService {
 	
 	public List<OpcionesMenu> getOpcionesPorRol(int id_rol){
 		return opcionesRepository.getOpcionesPorRol(id_rol);
+	}
+	
+	public void addOpcion(OpcionesMenu opcionMenu) {
+		opcionesRepository.save(opcionMenu);
+	}
+	
+	public void edit(OpcionesMenu opcionMenu) {
+		opcionesRepository.save(opcionMenu);
 	}
 }

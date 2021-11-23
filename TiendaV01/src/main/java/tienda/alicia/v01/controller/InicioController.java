@@ -4,6 +4,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Target;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -17,15 +18,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.w3c.dom.ls.LSInput;
+
+import com.zaxxer.hikari.util.SuspendResumeLock;
+
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import tienda.alicia.v01.model.Categoria;
 import tienda.alicia.v01.model.Producto;
+import tienda.alicia.v01.model.Proveedor;
+import tienda.alicia.v01.model.Usuario;
+import tienda.alicia.v01.model.Valoracion;
 import tienda.alicia.v01.service.CategoriaService;
 import tienda.alicia.v01.service.ProductoService;
 import tienda.alicia.v01.service.UsuarioService;
+import tienda.alicia.v01.service.ValoracionService;
 import tienda.alicia.v01.util.Buscador;
 import tienda.alicia.v01.util.ObjetoBuscador;
 
@@ -37,6 +45,10 @@ public class InicioController {
 	ProductoService productoService;
 	@Autowired
 	CategoriaService categoriaService;
+	@Autowired
+	ValoracionService valoracionService;
+	@Autowired
+	UsuarioService usuarioService;
 
 	// private ArrayList carritolista = new ArrayList();
 	private static Logger logger = LogManager.getLogger(InicioController.class);
@@ -142,6 +154,43 @@ public class InicioController {
 	@GetMapping("/vistaproducto/{id}")
 	public String vistaProducto(@PathVariable int id,Model model) {
 		Producto producto = productoService.getProductoPorId(id);
+		List<Valoracion> listaValoraciones = valoracionService.getValoracionesDeUnProducto(id);
+		//Hacer media de reviews
+		boolean tieneValoraciones;
+		double valoracionSuma = 0;
+		int cantidadValoraciones = listaValoraciones.size();
+		for (Valoracion valoracion : listaValoraciones) {
+			valoracionSuma += valoracion.getValoracion();
+		}
+		double valoracionMedia = valoracionSuma/cantidadValoraciones;
+		if(cantidadValoraciones > 0) {
+			tieneValoraciones = true; 
+		}else {
+			tieneValoraciones = false;
+		}
+		
+		
+		//Lista de usuarios que hacen valoraciones
+		List<Usuario> listaUsuario = usuarioService.getListaUsuarios();
+		
+		
+		ArrayList<Integer> listadeIdsUsuarioEnValoracion = new ArrayList();
+		
+		
+		for (Valoracion valoracion : listaValoraciones) {
+			listadeIdsUsuarioEnValoracion.add(valoracion.getId_Usuario());
+		}
+		
+		HashMap<Integer, String> listaIdCategoriaEnProducto = usuarioService.listaUsuariosIdsEnValoraciones(listadeIdsUsuarioEnValoracion);
+	
+		// Se pasa como atributo a la vista
+		model.addAttribute("nombreUsuario", listaIdCategoriaEnProducto);
+	
+		//
+		model.addAttribute("tieneValoraciones", tieneValoraciones);
+		model.addAttribute("valoracionMedia", valoracionMedia);
+		model.addAttribute("cantidadValoraciones", cantidadValoraciones);
+		model.addAttribute("listaValoraciones", valoracionService.getValoracionesDeUnProducto(id));
 		logger.info(String.format(" >>>>>> Ir a la vista del producto: "+id));
 		model.addAttribute("producto", producto);
 		return "vistaproducto";

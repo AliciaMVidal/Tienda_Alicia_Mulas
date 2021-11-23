@@ -46,7 +46,7 @@
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-               	<header th:replace="/administracion/fragmentos/topbar::barrasuperior"></header>
+               	<header th:replace="/administracion/fragmentos/topbar2::barrasuperior"></header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
@@ -70,18 +70,9 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Editar usuario</h4>
+                        <h4 class="page-title">Editar empleado</h4>
                     </div>
-                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <div class="d-md-flex">
-                            <ol class="breadcrumb ms-auto">
-                                <li><a href="#" class="fw-normal">Dashboard</a></li>
-                            </ol>
-                            <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
-                                class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
-                                to Pro</a>
-                        </div>
-                    </div>
+                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -106,13 +97,15 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material" th:action="@{/administracion/empleados/editempleado/submit}" th:object="${usuario}" method="post">
                                     <input type="hidden"  name="id" id="id" th:field="*{id}"/>
+                                    <input type="hidden"  name="clave" id="clave" th:field="*{clave}"/>
+                                    <input type="hidden"  name="activo" id="activo" th:field="*{activo}"/>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Email</label>
                                         <div class="col-md-12 border-bottom p-0">
                                             <input type="email" placeholder="email"
                                                 class="form-control p-0 border-0" id="email" name="email" th:field="*{email}"> </div>
                                     </div>
-                                      <div class="form-group mb-4">
+                                      <div class="form-group mb-4" hidden>
                                         <label class="col-md-12 p-0">Id Rol</label>
                                          <div class="col-md-12 border-bottom p-0" >
                                             <input type="text" placeholder="Rol" class="form-control p-0 border-0" name="id_rol" id="id_rol" value="2">
@@ -199,8 +192,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

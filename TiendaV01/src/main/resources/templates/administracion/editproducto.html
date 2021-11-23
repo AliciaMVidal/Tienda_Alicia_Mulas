@@ -14,7 +14,7 @@
     <title>Ample Admin Lite Template by WrapPixel</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../plugins/images/favicon.png">
     <!-- Custom CSS -->
    <link href="../../css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -46,7 +46,7 @@
         <!-- ============================================================== -->
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
-               	<header th:replace="/administracion/fragmentos/topbar::barrasuperior"></header>
+               	<header th:replace="/administracion/fragmentos/topbar2::barrasuperior"></header>
         <!-- ============================================================== -->
         <!-- End Topbar header -->
         <!-- ============================================================== -->
@@ -63,6 +63,7 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
+       
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -73,14 +74,7 @@
                         <h4 class="page-title">Editar Producto</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <div class="d-md-flex">
-                            <ol class="breadcrumb ms-auto">
-                                <li><a href="#" class="fw-normal">Dashboard</a></li>
-                            </ol>
-                            <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
-                                class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
-                                to Pro</a>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -106,12 +100,35 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material" th:action="@{/administracion/productos/editproducto/submit}" th:object="${producto}" method="post">
                                    	<input type="hidden"  name="id" id="id" th:field="*{id}"/>
-                                   	   <div class="form-group mb-4">
+                                   	<input type="hidden"  name="imagen" id="imagen" th:field="*{imagen}"/>
+                                   	<input type="hidden"  name="fecha_alta" id="fecha_alta" th:field="*{fecha_alta}"/>
+                                   	
+                                   	<input type="hidden"  name="activo" id="activo" th:field="*{activo}"/>
+                                   	  <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Categoria del producto</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="Nombre de producto"
-                                                class="form-control p-0 border-0" id="id_categoria" name="id_categoria" th:field="*{id_categoria}"> </div>
-                                    </div>
+                                         <select class="form-control search-slt"  name="id_categoria"  id="id_categoria">
+                                <option 
+    							    th:each="categoria : ${listaCategorias}"
+        							th:value="${categoria.id}" 
+        							th:field="*{id_categoria}"
+       								th:text="${categoria.nombre}"></option>
+                               
+                            </select> 
+                            </div>
+                             </div>
+                                	   <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Proveedor del producto</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                         <select class="form-control search-slt"  name="id_proveedor"  id="id_proveedor">
+                                <option 
+    							    th:each="proveedor : ${listaProveedores}"
+        							th:value="${proveedor.id}" 
+        							th:field="*{id_proveedor}"
+       								th:text="${proveedor.nombre}"></option>
+                               
+                            </select> 
+                            </div>
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Nombre de producto</label>
                                         <div class="col-md-12 border-bottom p-0">
@@ -139,20 +156,7 @@
                                                 class="form-control p-0 border-0" th:field="*{stock}">
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-md-12 p-0">Fecha de alta</label>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <input type="date"  placeholder="Stock" name="fecha_alta" id="fecha_alta"
-                                                class="form-control p-0 border-0" th:field="*{fecha_alta}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-md-12 p-0">Fecha de baja</label>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <input type="date"  placeholder="Stock" name="fecha_baja" id="fecha_baja"
-                                                class="form-control p-0 border-0" th:field="*{fecha_baja}">
-                                        </div>
-                                    </div>
+                                
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Impuesto</label>
                                         <div class="col-md-12 border-bottom p-0">
@@ -186,14 +190,14 @@
                 <!-- End Right sidebar -->
                 <!-- ============================================================== -->
             </div>
+            </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+             <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
@@ -202,7 +206,7 @@
         <!-- ============================================================== -->
         <!-- End Page wrapper  -->
         <!-- ============================================================== -->
-    </div>
+    
     <!-- ============================================================== -->
     <!-- End Wrapper -->
     <!-- ============================================================== -->

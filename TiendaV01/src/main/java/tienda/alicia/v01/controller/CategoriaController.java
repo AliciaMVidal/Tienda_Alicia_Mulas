@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -73,6 +74,31 @@ public class CategoriaController {
 		categoriaService.addCategoria(categoria);
 		logger.info(String.format(" >>>>>> Categoria nueva creada "+categoria.toString()));
 		return "redirect:/administracion/categorias";
+	}
+	
+	@GetMapping("/editcategoria/{id}")
+	public String editEmpleado(@PathVariable int id, Model model,HttpSession sesion) {
+		Categoria categoria = categoriaService.getCategoriaById(id);
+		model.addAttribute("categoria", categoria);
+		//
+		Usuario usuarioo;
+		String email = (String) sesion.getAttribute("sesion");
+		usuarioo = usuarioServicio.getUsuarioByEmail(email);
+		int idrol = usuarioo.getId_rol();
+		model.addAttribute("idrol", idrol);
+		ArrayList<OpcionesMenu> listaOpciones = new ArrayList<OpcionesMenu>();
+		listaOpciones = (ArrayList<OpcionesMenu>) opcionesMenuServicio.getOpcionesPorRol(idrol);
+		model.addAttribute("listaOpciones", listaOpciones);
+		logger.info(String.format(" >>>>>> Cargando formulario para editar el empleado: "+usuarioo.toString()));
+		return "administracion/editcategoria";
+		
+	}
+	
+	@PostMapping("/editcategoria/submit")
+	public String editCategoriaSubmit(@ModelAttribute Categoria categoria) {
+		categoriaService.editCategoria(categoria);
+		logger.info(String.format(" >>>>>> Categoria editado: "+categoria.toString()));
+		return "redirect:/administracion/categorias";	
 	}
 
 }

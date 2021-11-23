@@ -29,7 +29,7 @@
             -moz-user-select: none;
             user-select: none;
         }
-
+        
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
@@ -46,7 +46,7 @@
 
 
 
-       
+
         <div class="album py-5 bg-light">
 
             <div class="container">
@@ -57,123 +57,114 @@
                 </div>
 
                 <h1 class="page-title">Mis datos</h1>
-           
-            <div class="container mt-5 mb-5 pb-5">
-                <div class="row justify-content-center">
-                 <div class="col-sm-8 col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h2>Editar Datos</h2>
-                    </div>
-                    <div class="card-body">
-<form th:action="@{/perfil/editar/submit}" th:object="${usuario}" class="edit-profile-form" method="POST">
-	 	<input type="hidden"  name="id" id="id" th:field="*{id}"/>
-		<input type="hidden"  name="clave" id="clave" th:field="*{clave}"/>
-    <div class="form-group
-        required" >
-        <label class="form-control-label" for="firstName">
+
+                <div class="container mt-5 mb-5 pb-5">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>Editar Datos</h2>
+                                </div>
+                                <div class="card-body">
+                                    <form th:action="@{/perfil/editar/submit}" th:object="${usuario}" class="edit-profile-form" method="POST">
+                                        <input type="hidden" name="id" id="id" th:field="*{id}" />
+                                        <input type="hidden" name="clave" id="clave" th:field="*{clave}" />
+                                        <div class="form-group
+        required">
+                                            <label class="form-control-label" for="firstName">
             Nombre
         </label>
-        <input type="text" class="form-control" id="nombre"
-            name="nombre" required aria-required="true" th:field="*{nombre}">
-        <div class="invalid-feedback"></div>
-    </div>
+                                            <input type="text" class="form-control" id="nombre" name="nombre" required aria-required="true" th:field="*{nombre}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
 
-    <div class="form-group
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="lastName">
+                                            <label class="form-control-label" for="lastName">
             Primer apellido
         </label>
-        <input type="text" class="form-control" id="apellido1"
-            name="apellido1" required aria-required="true" th:field="*{apellido1}">
-        <div class="invalid-feedback"></div>
-    </div>
-     <div class="form-group
+                                            <input type="text" class="form-control" id="apellido1" name="apellido1" required aria-required="true" th:field="*{apellido1}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="lastName">
+                                            <label class="form-control-label" for="lastName">
             Segundo apellido
         </label>
-        <input type="text" class="form-control" id="apellido2"
-            name="apellido2" required aria-required="true" th:field="*{apellido2}">
-        <div class="invalid-feedback"></div>
-    </div>
+                                            <input type="text" class="form-control" id="apellido2" name="apellido2" required aria-required="true" th:field="*{apellido2}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
 
-    <div class="form-group
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Email
         </label>
-        <input type="email" class="form-control" id="email"
-            name="email" required aria-required="true" th:field="*{email}">
-        <div class="invalid-feedback"></div>
-    </div>
-    
-        <div class="form-group
+                                            <input type="email" class="form-control" id="email" name="email" required aria-required="true" th:field="*{email}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Dni
         </label>
-        <input type="text" class="form-control" id="dni"
-            name="dni" required aria-required="true" th:field="*{dni}">
-        <div class="invalid-feedback"></div>
-    </div>
-     
-    
-        <div class="form-group
+                                            <input type="text" class="form-control" id="dni" name="dni" required aria-required="true" th:field="*{dni}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+
+
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Dirección
         </label>
-        <input type="text" class="form-control" id="direccion"
-            name="direccion" required aria-required="true" th:field="*{direccion}">
-        <div class="invalid-feedback"></div>
-    </div>
-          <div class="form-group
+                                            <input type="text" class="form-control" id="direccion" name="direccion" required aria-required="true" th:field="*{direccion}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Provincia
         </label>
-        <input type="text" class="form-control" id="provincia"
-            name="provincia" required aria-required="true" th:field="*{provincia}">
-        <div class="invalid-feedback"></div>
-    </div>
-    
-        <div class="form-group
+                                            <input type="text" class="form-control" id="provincia" name="provincia" required aria-required="true" th:field="*{provincia}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Localidad
         </label>
-        <input type="text" class="form-control" id="localidad"
-            name="localidad" required aria-required="true" th:field="*{localidad}">
-        <div class="invalid-feedback"></div>
-    </div>
-           <div class="form-group
+                                            <input type="text" class="form-control" id="localidad" name="localidad" required aria-required="true" th:field="*{localidad}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-group
         required">
-        <label class="form-control-label" for="email">
+                                            <label class="form-control-label" for="email">
             Teléfono
         </label>
-        <input type="text" class="form-control" id="telefono"
-            name="telefono" required aria-required="true" th:field="*{telefono}">
-        <div class="invalid-feedback"></div>
-    </div>
+                                            <input type="text" class="form-control" id="telefono" name="telefono" required aria-required="true" th:field="*{telefono}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
 
 
-    <div class="row">
-        <div class="col">
-            <a th:href="@{/perfil}" class="btn btn-block btn-secondary">Cancelar</a>
-        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a th:href="@{/perfil}" class="btn btn-block btn-secondary">Cancelar</a>
+                                            </div>
 
-        <div class="col">
-            <button type="submit" name="save" class="btn btn-save btn-block btn-primary">Guardar</button>
-        </div>
-    </div>
-</form>
-                    
+                                            <div class="col">
+                                                <button type="submit" name="save" class="btn btn-save btn-block btn-primary">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </form>
 
-        </div>
-        </div>
-        </div>
-        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
     </main>

@@ -56,36 +56,48 @@
                     </div>
                 </div>
 
-                <h1 class="page-title">Mis datos</h1>
+                <h1 class="page-title"> Detalle Pedido</h1>
            
             <div class="container mt-5 mb-5 pb-5">
                 <div class="row justify-content-center">
                  <div class="col-sm-8 col-md-10">
                 <div class="card">
-                    <div class="card-header">
-                        <h2>Detalle pedido:</h2>
-                    </div>
+                   
                     <div class="card-body">
-  <table class="table"  th:each="detallePedido : ${listadetalle}">
-  <thead>
-    <tr>
-      <th scope="col">Producto</th>
-      <th scope="col">Cantidad</th>
-      <th scope="col">Estado</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td th:text="${productonombre.get(detallePedido.id_producto)}">fecha</td>
-      <td th:text="${detallePedido.unidades}">cantidad</td>
-      <td th:text="${detallePedido.precio_unidad}">cantidad</td>
-      <td th:text="${detallePedido.total}">cantidad</td>
+                        <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                            <h3 class="box-title"></h3>
+                            <div class="table-responsive">
+                                <table class="table text-nowrap">
+                                    <thead>
+                                        <tr>                                            
+                                            <th class="border-top-0">Producto</th>
+                                            <th class="border-top-0">Cantidad</th>
+                                            <th class="border-top-0">Estado</th>
+                                            <th class="border-top-0">Total</th>
+                                            <th class="border-top-0"></th>
+                                        
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="detallePedido : ${listadetalle}">
+                                            
+                                            <td th:text="${productonombre.get(detallePedido.id_producto)}">Nombr</td>
+                                            <td th:text="${detallePedido.unidades}">Cotnraseña</td>
+                                            <td th:text="${detallePedido.precio_unidad}">cantidad</td>
+     										<td th:text="${detallePedido.total}">cantidad</td>                                       
+                                            <td><a th:href="@{/perfil/valorarproducto/}+${detallePedido.id_producto}"><button type="button" class="btn btn-outline-danger btn-sm">Valorar producto</button></a></td>
+                                           
 
-  
-    </tr>
-  </tbody>
-</table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
                     
 

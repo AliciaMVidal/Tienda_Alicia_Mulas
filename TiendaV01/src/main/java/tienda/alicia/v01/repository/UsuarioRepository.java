@@ -1,5 +1,6 @@
 package tienda.alicia.v01.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -7,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import tienda.alicia.v01.model.Proveedor;
 import tienda.alicia.v01.model.Usuario;
 
 @Repository
@@ -31,5 +33,7 @@ public interface UsuarioRepository  extends JpaRepository<Usuario, Integer>{
 	@Query(value="select * from Usuario where id_rol=?1", nativeQuery = true)
 	List<Usuario> listaEmpleados(int id);
 	
+	List<Usuario> findByIdIn(ArrayList<Integer> listaidsusuario);
+
 
 }

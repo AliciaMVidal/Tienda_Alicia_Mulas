@@ -80,10 +80,10 @@
 
                         <div class="card">
                             <div class="card-header clearfix">
-                                <h2 class="pull-left profile-header">Mis Datos</h2>
+                                <h2 class="pull-left profile-header">Mis Datos
 
                                 <a th:href="@{/perfil/editar/}+${usuario.id}" class="pull-right account-link"
-                                    aria-label="Editar Datos">Editar</a>
+                                    aria-label="Editar Datos"><button type="button" class="btn btn-outline-danger">Editar</button></a></h2>
 
                             </div>
                             <div class="card-body">
@@ -110,20 +110,22 @@
 
                             </div>
                         </div>
-
-                        <div class="card">
+                                      <div class="card">
                             <div class="card-header clearfix">
-                                <h2 class="pull-left">Contraseña</h2>
-                                <a href="/on/demandware.store/Sites-KiwokoES-Site/default/Account-EditPassword"
-                                    class="pull-right" aria-label="Cambiar Contrase&ntilde;a"></a>
+                                <h2 class="pull-left">Mis pedidos  <a th:href="@{/perfil/editarpedido/}+${usuario.id}" class="pull-right account-link"
+                                    aria-label="Editar Datos"><button type="button" class="btn btn-outline-danger">Ver pedidos</button></a></h2>
+ 									
                             </div>
                             <div class="card-body">
-                                <dl>
-                                    <dt class="dashboard-info">Contrase&ntilde;a</dt>
-                                    <dd>********</dd>
+                                <dl  th:each="pedido : ${listaPedidos}">
+                                    <dt>Pedido</dt>
+                                    <dd th:text="${pedido.fecha}+' '+${pedido.metodo_pago}+' '+${pedido.total}+'€ '+${pedido.estado} ">Pedido</dd>
                                 </dl>
+                               
                             </div>
                         </div>
+
+                     
 
 
 
@@ -131,7 +133,8 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <div class="card-header clearfix">
-                                <h2 class="pull-left">Mi dirección</h2>
+                                <h2 class="pull-left">Mi dirección <a th:href="@{/perfil/editar/}+${usuario.id}" class="pull-right account-link"
+                                    aria-label="Editar Datos"><button type="button" class="btn btn-outline-danger">Editar</button></a></h2>
  									
                             </div>
                             <div class="card-body">
@@ -158,20 +161,7 @@
 
                             </div>
                         </div>
-                               <div class="card">
-                            <div class="card-header clearfix">
-                                <h2 class="pull-left">Mis pedidos</h2>
- 									<a th:href="@{/perfil/editarpedido/}+${usuario.id}" class="pull-right account-link"
-                                    aria-label="Editar Datos">Editar</a>
-                            </div>
-                            <div class="card-body">
-                                <dl  th:each="pedido : ${listaPedidos}">
-                                    <dt>Pedido</dt>
-                                    <dd th:text="${pedido.fecha}+' '+${pedido.metodo_pago}+' '+${pedido.total}+'€ '+${pedido.estado} ">Pedido</dd>
-                                </dl>
-                               
-                            </div>
-                        </div>
+                 
                         
 
                             </div>

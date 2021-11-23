@@ -131,10 +131,10 @@
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">Id</th>
-                                            <th class="border-tol-0">Id categoria</th>
+                                            
+                                            <th class="border-tol-0">Categoria</th>
+                                            <th class="border-tol-0">Proveedor</th>
                                             <th class="border-top-0">Nombre</th>
-                                            <th class="border-top-0">Descripcion</th>
                                             <th class="border-top-0">Precio</th>
                                             <th class="border-top-0">Stock</th>
                                             <th class="border-top-0">fecha alta</th>
@@ -142,20 +142,23 @@
                                             <th class="border-top-0">impuesto</th>
                                             <th class="border-top-0"></th>
                                             <th class="border-top-0"></th>
+                                            <th class="border-top-0"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr th:each="producto : ${listaProductos}">
-                                            <td th:text="${producto.id}">Id</td>
-                                            <td th:text="${producto.id_categoria}">categoria</td>
+                                            <td th:text="${producto.id}" hidden>Id</td>
+                                            <td th:text="${nombrecategoria.get(producto.id_categoria)}">categoria</td>
+                                            <td th:text="${nombreproveedor.get(producto.id_proveedor)}">categoria</td>
                                             <td th:text="${producto.nombre}">Nombr</td>
-                                            <td th:text="${producto.descripcion}">Cotnraseña</td>
-                                            <td th:text="${producto.precio}">Cotnraseña</td>
+                                            <td th:text="${producto.precio}">Cotnraseña</td>  
                                             <td th:text="${producto.stock}">stock</td>
                                             <td th:text="${producto.fecha_alta}"></td>
                                             <td th:text="${producto.fecha_baja}"></td>
                                             <td th:text="${producto.impuesto}"></td>
                                             <td><a th:href="@{/administracion/productos/editproducto/}+${producto.id}">Editar</a></td>
+                                            <td th:if="${producto.activo} == true"><a th:href="@{/administracion/productos/desactivarproducto/}+${producto.id}">Desactivar</a></td>
+                                            <td th:if="${producto.activo} == false"><a th:href="@{/administracion/productos/activarproducto/}+${producto.id}">Activar</a></td>
                                             <td th:if="${idrol} == 1"><a th:href="@{/administracion/productos/deleteproducto/}+${producto.id}">Eliminar</a></td>
                                         </tr>
                                     </tbody>
@@ -185,8 +188,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+          <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

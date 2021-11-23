@@ -23,8 +23,15 @@ public class ConfiguracionService {
 		configuracionRepository.save(confi);
 		confi = new Configuracion("Cif","B-123456", "texto");
 		configuracionRepository.save(confi);
-		confi = new Configuracion("NFactura","0001", "texto");
+		confi = new Configuracion("NFactura","0000", "texto");
 		configuracionRepository.save(confi);
+		confi = new Configuracion("Direccion","Paseo Medrano, 383", "texto");
+		configuracionRepository.save(confi);
+		confi = new Configuracion("Localidad","Zamora", "texto");
+		configuracionRepository.save(confi);
+		confi = new Configuracion("Provincia","Zamora", "texto");
+		configuracionRepository.save(confi);
+
 	
 	}
 	

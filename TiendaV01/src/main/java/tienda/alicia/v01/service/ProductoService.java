@@ -30,43 +30,43 @@ public class ProductoService {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String formattedDate = simpleDateFormat.format(date);
 		java.sql.Date date1 = java.sql.Date.valueOf(formattedDate);
-		Producto producto;
-		producto = new Producto(24, "Applaws feline adult Salmón y Pollo 7,5KG",
+		
+		Producto producto = new Producto(1, 1, "Applaws feline adult Salmón y Pollo 7,5KG",
 				"Pienso para gatos Sin cereales e hipoalergénico. Con una receta que garantiza una dieta completa y equilibrada.",
-				37.99, 20, date1,date1, 21, "/img/comidagatoapplaws.jpg");
+				37.99, 20, date1,null, 21, "/img/comidagatoapplaws.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(24, "Lata Catzilla para gato 90Gr", "Comida húmeda para gatos en edad adulta o gatos senior. Su principal característica es que en su elaboración se han utilizado ingredientes naturales.\r\n" + 
-				"", 1.45, 120, date1, date1, 21, "/img/comidagatocatzilla.jpg");
+		producto = new Producto(1, 2, "Lata Catzilla para gato 90Gr", "Comida húmeda para gatos en edad adulta o gatos senior. Su principal característica es que en su elaboración se han utilizado ingredientes naturales.\r\n" + 
+				"", 1.45, 120, date1, null, 21, "/img/comidagatocatzilla.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(24, "Catisfactions snacks para gatos Salmón", "Snacks para gatos, elaborados con deliciosos sabores para crear unos sabrosos premios felinos.",
-				1.49, 40, date1, date1, 21, "/img/comidagatosnack.jpg");
+		producto = new Producto(1, 1, "Catisfactions snacks para gatos Salmón", "Snacks para gatos, elaborados con deliciosos sabores para crear unos sabrosos premios felinos.",
+				1.49, 40, date1, null, 21, "/img/comidagatosnack.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(25, "Dogzilla Adult Salmón", "Alimento completo para perros con un gran sabor a salmón, que le proporciona todos los nutrientes que necesita.",
-				19.95, 25, date1, date1,21, "/img/comidaperrodogzilla.jpg");
+		producto = new Producto(2, 2, "Dogzilla Adult Salmón", "Alimento completo para perros con un gran sabor a salmón, que le proporciona todos los nutrientes que necesita.",
+				19.95, 25, date1, null,21, "/img/comidaperrodogzilla.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(25, "True origins wild dog country", "Pienso natural elaborado para perros adultos, con ingredientes seleccionados para aportar una nutrición completa y equilibrada a nuestras mascotas para que se mantengan sanos",
-				55.95, 15, date1, date1, 21, "/img/comidaperronatural.jpg");
+		producto = new Producto(2, 5, "True origins wild dog country", "Pienso natural elaborado para perros adultos, con ingredientes seleccionados para aportar una nutrición completa y equilibrada a nuestras mascotas para que se mantengan sanos",
+				55.95, 15, date1, null, 21, "/img/comidaperronatural.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(25, "Pienso para perros purina pro", "Pienso para cachorros de razas medianas elaborado con ingredientes seleccionados para conseguir una receta nutritiva que fomente el crecimiento de la mascota.\r\n" + 
-				"", 49.45, 64, date1, date1, 21, "/img/comidaperrocachorro.jpg");
+		producto = new Producto(2, 5, "Pienso para perros purina pro", "Pienso para cachorros de razas medianas elaborado con ingredientes seleccionados para conseguir una receta nutritiva que fomente el crecimiento de la mascota.\r\n" + 
+				"", 49.45, 64, date1, null, 21, "/img/comidaperrocachorro.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(26, "JBL novogranomix mini alimento para peces", "Ofrece una alimentación completa a tus peces tropicales de agua dulce de pequeño tamaño con JBL NovoGranoMix Mini alimento para peces.\r\n" + 
-				"", 10.68, 12, date1, date1, 21, "/img/comidapecesmini.jpg");
+		producto = new Producto(3, 3, "JBL novogranomix mini alimento para peces", "Ofrece una alimentación completa a tus peces tropicales de agua dulce de pequeño tamaño con JBL NovoGranoMix Mini alimento para peces.\r\n" + 
+				"", 10.68, 12, date1, null, 21, "/img/comidapecesmini.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(26, "Tetra pond sticks comida para peces","Una alimentación completa, saludable y que potenciará sus colores naturales, así es Tetra Pond sticks comida para peces.\r\n" + 
-				"", 5.29, 45, date1, date1, 21, "/img/comidapecesnaranja.jpg");
+		producto = new Producto(3, 3, "Tetra pond sticks comida para peces","Una alimentación completa, saludable y que potenciará sus colores naturales, así es Tetra Pond sticks comida para peces.\r\n" + 
+				"", 5.29, 45, date1, null, 21, "/img/comidapecesnaranja.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(26, "JBL propond all seasons alimento para peces", "Elige un alimento que cubra todas las necesidades nutricionales de tus peces de estanque con JBL ProPond All Seasons alimento para peces.\r\n" + 
-				"",40.79, 17, date1, date1, 21, "/img/comidapecestodos.jpg");
+		producto = new Producto(3, 3, "JBL propond all seasons alimento para peces", "Elige un alimento que cubra todas las necesidades nutricionales de tus peces de estanque con JBL ProPond All Seasons alimento para peces.\r\n" + 
+				"",40.79, 17, date1, null, 21, "/img/comidapecestodos.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(27, "Vitakraft menú canario 1KG","Alimento especial para canarios.\r\n" + 
-				"",3.49, 62, date1, date1, 21, "/img/comidapajaroscanarios.jpg");
+		producto = new Producto(4, 4, "Vitakraft menú canario 1KG","Alimento especial para canarios.\r\n" + 
+				"",3.49, 62, date1, null, 21, "/img/comidapajaroscanarios.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(27, "Vivanimals pienso para pájaros exóticos","El pienso para agapornis, ninfas y cotorras Vivanimals es un alimento completo para nutrir a tus aves diariamente con los mejores ingredientes.\r\n" + 
-				"",1.99, 22, date1, date1, 21, "/img/comidapajaroexotico.jpg");
+		producto = new Producto(4, 4, "Vivanimals pienso para pájaros exóticos","El pienso para agapornis, ninfas y cotorras Vivanimals es un alimento completo para nutrir a tus aves diariamente con los mejores ingredientes.\r\n" + 
+				"",1.99, 22, date1, null, 21, "/img/comidapajaroexotico.jpg", true);
 		productoRepository.save(producto);
-		producto = new Producto(27, "Snack para pájaros small file espiga de mijo 150GR","La espiga de mijo es un alimento complementario para pájaros rico en nutrientes. Y... ¡diversión asegurada para la mascota!\r\n" + 
-				"",2.91, 7, date1, date1, 21, "/img/comidapajarosnack.jpg");
+		producto = new Producto(4, 3, "Snack para pájaros small file espiga de mijo 150GR","La espiga de mijo es un alimento complementario para pájaros rico en nutrientes. Y... ¡diversión asegurada para la mascota!\r\n" + 
+				"",2.91, 7, date1, null, 21, "/img/comidapajarosnack.jpg", true);
 		productoRepository.save(producto);
 		}
 		

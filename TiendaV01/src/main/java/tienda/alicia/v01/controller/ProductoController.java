@@ -7,6 +7,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -31,10 +32,13 @@ import jxl.write.Number;
 import tienda.alicia.v01.model.Categoria;
 import tienda.alicia.v01.model.OpcionesMenu;
 import tienda.alicia.v01.model.Producto;
+import tienda.alicia.v01.model.Proveedor;
+import tienda.alicia.v01.model.Rol;
 import tienda.alicia.v01.model.Usuario;
 import tienda.alicia.v01.service.CategoriaService;
 import tienda.alicia.v01.service.OpcionesMenuService;
 import tienda.alicia.v01.service.ProductoService;
+import tienda.alicia.v01.service.ProveedorService;
 import tienda.alicia.v01.service.UsuarioService;
 
 @Controller
@@ -49,16 +53,48 @@ public class ProductoController {
 	OpcionesMenuService opcionesMenuServicio;
 	@Autowired
 	CategoriaService categoriasService;
+	@Autowired
+	ProveedorService proveedorService;
 
 	@GetMapping("")
 	public String inicio(Model model, HttpSession sesion) {
 		model.addAttribute("listaProductos", productoService.getListaProductos());
+		List<Producto> listaProductos = productoService.getListaProductos();
+		// para las categorias
+		// Cargar el nombre de la categoria que sale en la tabla segun el id_categoria
+		// Se saca una lista de todas las categorias que hay
+		List<Categoria> listaCategorias = categoriasService.getTodasCategorias();
+		List<Proveedor> listaProveedor = proveedorService.getTodosProveedores();
+		// Se crea una lista donde se van a almacenar todos los ids de las categorias
+		// que
+		// puede tener un producto
+		ArrayList<Integer> listadeIdsCategoriaEnProducto = new ArrayList();
+		ArrayList<Integer> listadeIdsProovedorEnProducto = new ArrayList();
+		// Se recorre la lista de los productos que hay
+		// y se guardan los ids de las categorias de cada producto
+		for (Producto producto : listaProductos) {
+			listadeIdsCategoriaEnProducto.add(producto.getId_categoria());
+			listadeIdsProovedorEnProducto.add(producto.getId_proveedor());
+		}
+		// Se crea un hashmap donde se guarda el id de la categoria que esta en el
+		// producto
+		// y el nombre de la categoria de la tabla categoria
+		// Se pasa como parametro la lista de los ids categoria que estan en los
+		// productos
+		// productos
+		HashMap<Integer, String> listaIdCategoriaEnProducto = categoriasService
+				.listaCategoriasIds(listadeIdsCategoriaEnProducto);
+		HashMap<Integer, String> listaIdsProveedorEnProducto = proveedorService.listaProveedoresIds(listadeIdsProovedorEnProducto);
+		// Se pasa como atributo a la vista
+		model.addAttribute("nombrecategoria", listaIdCategoriaEnProducto);
+		model.addAttribute("nombreproveedor", listaIdsProveedorEnProducto);
 		// Coger el usuario que quiere va a hacer esto
 		Usuario usuario;
 		String email = (String) sesion.getAttribute("sesion");
 		usuario = usuarioService.getUsuarioByEmail(email);
 		int idrol = usuario.getId_rol();
 		model.addAttribute("idrol", idrol);
+		// Para cargar el menu segun el rol del usuario(admin o empleado)
 		ArrayList<OpcionesMenu> listaOpciones = new ArrayList<OpcionesMenu>();
 		listaOpciones = (ArrayList<OpcionesMenu>) opcionesMenuServicio.getOpcionesPorRol(idrol);
 		model.addAttribute("listaOpciones", listaOpciones);
@@ -75,10 +111,13 @@ public class ProductoController {
 		model.addAttribute("idrol", idrol);
 		ArrayList<OpcionesMenu> listaOpciones = new ArrayList<OpcionesMenu>();
 		listaOpciones = (ArrayList<OpcionesMenu>) opcionesMenuServicio.getOpcionesPorRol(idrol);
-		//Nuevo
+		// Nuevo
 		List<Categoria> listaCategorias;
+		List<Proveedor> listaProveedores;
 		listaCategorias = categoriasService.getTodasCategorias();
+		listaProveedores = proveedorService.getTodosProveedores();
 		model.addAttribute("listaCategorias", listaCategorias);
+		model.addAttribute("listaProveedores", listaProveedores);
 		model.addAttribute("listaOpciones", listaOpciones);
 		return "administracion/addproducto";
 	}
@@ -86,6 +125,13 @@ public class ProductoController {
 	@PostMapping("/addproducto/submit")
 	public String addProductoSubmit(@ModelAttribute Producto producto) {
 		producto.setImagen("/img/sinfoto.jpg");
+		Date date = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		String formattedDate = simpleDateFormat.format(date);
+		java.sql.Date date1 = java.sql.Date.valueOf(formattedDate);
+		producto.setFecha_alta(date1);
+		producto.setFecha_baja(null);
+		producto.setActivo(true);
 		productoService.addProducto(producto);
 		return "redirect:/administracion/productos";
 	}
@@ -101,6 +147,13 @@ public class ProductoController {
 		ArrayList<OpcionesMenu> listaOpciones = new ArrayList<OpcionesMenu>();
 		listaOpciones = (ArrayList<OpcionesMenu>) opcionesMenuServicio.getOpcionesPorRol(idrol);
 		model.addAttribute("listaOpciones", listaOpciones);
+		// Nuevo
+		List<Categoria> listaCategorias;
+		List<Proveedor> listaProveedores;
+		listaCategorias = categoriasService.getTodasCategorias();
+		listaProveedores = proveedorService.getTodosProveedores();
+		model.addAttribute("listaCategorias", listaCategorias);
+		model.addAttribute("listaProveedores", listaProveedores);
 
 		model.addAttribute("producto", producto);
 		return "administracion/editproducto";
@@ -108,6 +161,8 @@ public class ProductoController {
 
 	@PostMapping("/editproducto/submit")
 	public String editProductoSubmit(@ModelAttribute Producto producto) {
+		
+		
 		productoService.editProducto(producto);
 		return "redirect:/administracion/productos";
 	}
@@ -115,6 +170,33 @@ public class ProductoController {
 	@GetMapping("/deleteproducto/{id}")
 	public String deleteProducto(@PathVariable int id, Model model) {
 		productoService.deleteProducto(id);
+		return "redirect:/administracion/productos";
+	}
+
+	@GetMapping("/desactivarproducto/{id}")
+	public String desactivarProducto(@PathVariable int id, Model model) {
+		Producto producto = productoService.getProductoPorId(id);
+		producto.setActivo(false);
+		Date date = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		String formattedDate = simpleDateFormat.format(date);
+		java.sql.Date date1 = java.sql.Date.valueOf(formattedDate);
+		producto.setFecha_baja(date1);
+		productoService.editProducto(producto);
+		return "redirect:/administracion/productos";
+	}
+
+	@GetMapping("/activarproducto/{id}")
+	public String activarProducto(@PathVariable int id, Model model) {
+		Producto producto = productoService.getProductoPorId(id);
+		producto.setActivo(true);
+		producto.setFecha_baja(null);
+		Date date = new Date();
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		String formattedDate = simpleDateFormat.format(date);
+		java.sql.Date date1 = java.sql.Date.valueOf(formattedDate);
+		producto.setFecha_alta(date1);
+		productoService.editProducto(producto);
 		return "redirect:/administracion/productos";
 	}
 
@@ -141,16 +223,26 @@ public class ProductoController {
 			jxl.write.Label cadena;
 			jxl.write.Number numero;
 			jxl.write.DateTime fecha;
+			
+			//para coger el nombre de la categoria
+			Categoria categoria = null;
+			Proveedor proveedor = null;
 			for (Producto producto : listaProductos) {
 
-				cadena = new jxl.write.Label(0, 0, "id");
+				//Categoria
+				cadena = new jxl.write.Label(0, 0, "Categoria");
 				sheet.addCell(cadena);
-				numero = new jxl.write.Number(0, listaProductos.indexOf(producto) + 1, producto.getId());
-				sheet.addCell(numero);
-				cadena = new jxl.write.Label(1, 0, "id_categoria");
+				//Coger el nombre de la categoria
+				categoria = categoriasService.getCategoriaById(producto.getId_categoria());
+				cadena = new jxl.write.Label(0, listaProductos.indexOf(producto), categoria.getNombre());
 				sheet.addCell(cadena);
-				numero = new jxl.write.Number(1, listaProductos.indexOf(producto) + 1, producto.getId_categoria());
-				sheet.addCell(numero);
+				//Proveedor
+				cadena = new jxl.write.Label(1, 0, "Proveedor");
+				sheet.addCell(cadena);
+				proveedor = proveedorService.getProveedorById(producto.getId_proveedor());
+				cadena = new jxl.write.Label(1, listaProductos.indexOf(producto) + 1, proveedor.getNombre());
+				sheet.addCell(cadena);
+				//
 				cadena = new jxl.write.Label(2, 0, "nombre");
 				sheet.addCell(cadena);
 				cadena = new jxl.write.Label(2, listaProductos.indexOf(producto) + 1, producto.getNombre());
@@ -173,8 +265,13 @@ public class ProductoController {
 				sheet.addCell(fecha);
 				cadena = new jxl.write.Label(7, 0, "fecha_baja");
 				sheet.addCell(cadena);
+				if(producto.getFecha_baja() == null) {
+					cadena = new jxl.write.Label(7, listaProductos.indexOf(producto) + 1, " ");
+					sheet.addCell(cadena);
+				}else {
 				fecha = new jxl.write.DateTime(7, listaProductos.indexOf(producto) + 1, producto.getFecha_baja());
 				sheet.addCell(fecha);
+				}
 				cadena = new jxl.write.Label(8, 0, "impuesto");
 				sheet.addCell(cadena);
 				numero = new jxl.write.Number(8, listaProductos.indexOf(producto) + 1, producto.getImpuesto());
@@ -224,16 +321,11 @@ public class ProductoController {
 				producto.setImpuesto(Double.parseDouble(sheet.getCell(7, f).getContents()));
 				producto.setImagen(sheet.getCell(8, f).getContents());
 
-				
-				
-
 			}
 			listaProductos.add(producto);
 			for (Producto productol : listaProductos) {
 				productoService.addProducto(productol);
 			}
-			
-			
 
 		} catch (BiffException e) {
 			// TODO Auto-generated catch block

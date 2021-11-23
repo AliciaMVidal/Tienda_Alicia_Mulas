@@ -37,10 +37,12 @@ import tienda.alicia.v01.model.DetallePedido;
 import tienda.alicia.v01.model.Pedido;
 import tienda.alicia.v01.model.Producto;
 import tienda.alicia.v01.model.Usuario;
+import tienda.alicia.v01.model.Valoracion;
 import tienda.alicia.v01.service.PedidoDetalleService;
 import tienda.alicia.v01.service.PedidoService;
 import tienda.alicia.v01.service.ProductoService;
 import tienda.alicia.v01.service.UsuarioService;
+import tienda.alicia.v01.service.ValoracionService;
 import tienda.alicia.v01.util.EscribirPDF;
 
 @Controller
@@ -55,7 +57,10 @@ public class PerfilController {
 	PedidoDetalleService detallePedidoServicio;
 	@Autowired
 	ProductoService productoServicio;
+	@Autowired
+	ValoracionService valoracionServicio;
 
+	
 	@GetMapping("")
 	public String inicio(Model model, HttpSession sesion) {
 		// Coger el usuario que esta conectado
@@ -91,7 +96,7 @@ public class PerfilController {
 		model.addAttribute("listaPedidos", listapedidos);
 		return "perfileditarpedidos";
 	}
-	
+
 	@GetMapping("/cancelarpedido/{id}")
 	public String cancelarPedido(Model model, @PathVariable int id) {
 		Pedido pedido = pedidoServicio.getPedidoById(id);
@@ -99,55 +104,88 @@ public class PerfilController {
 		pedidoServicio.cancelarPedido(pedido);
 		return "redirect:/perfil";
 	}
-	
+
 	@GetMapping("/verdetalle/{id}")
 	public String verDetallePedido(@PathVariable int id, Model model) {
-		//Buscar el pedido por el id
+		// Buscar el pedido por el id
 		Pedido pedido = pedidoServicio.getPedidoById(id);
-		//Lista de las lineas de pedido que hay en un pedido
+		// Lista de las lineas de pedido que hay en un pedido
 		List<DetallePedido> listaDetallePedido = detallePedidoServicio.getDetalleByIDPedido(pedido.getId());
-		//Esto sirve para sacar el nombre de los productos que hay en el detalle de los pedidos  
-		//Se saca una lista de todos los productos que hay
+		// Esto sirve para sacar el nombre de los productos que hay en el detalle de los
+		// pedidos
+		// Se saca una lista de todos los productos que hay
 		List<Producto> listaProductos = productoServicio.getListaProductos();
-		//Se crea una lista donde se van a almacenar todos los ids de productos que hay en un detalle de producto
+		// Se crea una lista donde se van a almacenar todos los ids de productos que hay
+		// en un detalle de producto
 		ArrayList<Integer> listadeIdsProductoEnDetallePedido = new ArrayList();
-		//Se recorre la lista de las linas que hay en un pedido
-		//y se guardan los ids de los productos de cada linea en un arraylist
+		// Se recorre la lista de las linas que hay en un pedido
+		// y se guardan los ids de los productos de cada linea en un arraylist
 		for (DetallePedido detalle : listaDetallePedido) {
 			listadeIdsProductoEnDetallePedido.add(detalle.getId_producto());
 		}
-		//Se crea un hashmap donde se guarda el id del producto que esta en el detalle del producto y el nombre de producto de la tabla producto
-		//Se pasa como parametro la lista de los ids producto que estan en en el detalle de producto
-		HashMap<Integer, String> listaIdProductoEnDetalleNombreProducto = productoServicio.listadeproductosids(listadeIdsProductoEnDetallePedido);
-		//System.out.println(listaIdProductoEnDetalleNombreProducto.toString());
-		//System.out.println("lista");
-		//System.out.println(listaDetallePedido);
+		// Se crea un hashmap donde se guarda el id del producto que esta en el detalle
+		// del producto y el nombre de producto de la tabla producto
+		// Se pasa como parametro la lista de los ids producto que estan en en el
+		// detalle de producto
+		HashMap<Integer, String> listaIdProductoEnDetalleNombreProducto = productoServicio
+				.listadeproductosids(listadeIdsProductoEnDetallePedido);
+		// System.out.println(listaIdProductoEnDetalleNombreProducto.toString());
+		// System.out.println("lista");
+		// System.out.println(listaDetallePedido);
 		model.addAttribute("listadetalle", listaDetallePedido);
 		model.addAttribute("productonombre", listaIdProductoEnDetalleNombreProducto);
-		
+
 		return "perfilverdetallepedido";
 	}
+
+	@GetMapping("/valorarproducto/{id}")
+	public String valorarProducto(@PathVariable int id, Model model) {
+		Producto producto = productoServicio.getProductoId(id);
+		// Coger el usuario que esta conectado
 	
+		model.addAttribute("valoracion", new Valoracion());
+		model.addAttribute("nombreProducto", producto.getNombre());
+		model.addAttribute("idproducto", producto.getId());
+		
+		return "valorarproducto";
+	}
+
+	@PostMapping("/valorarproducto/submit")
+	public String valorarProductosubmit(Valoracion valoracion, HttpSession sesion ) {
+		// Coger el usuario que esta conectado
+		Usuario usuario;
+		String email = (String) sesion.getAttribute("sesion");
+		usuario = usuarioServicio.getUsuarioByEmail(email);
+		valoracion.setId_Usuario(usuario.getId());
+		valoracionServicio.addValoracion(valoracion);
+		
+		return "redirect:/perfil";
+	}
+
 	@GetMapping("/descargarfactura/{id}")
 	public String descargarFactura(@PathVariable int id, Model model) {
-		//Buscar el pedido por el id
+		// Buscar el pedido por el id
 		Pedido pedido = pedidoServicio.getPedidoById(id);
-		//Lista de las lineas de pedido que hay en un pedido
+		// Lista de las lineas de pedido que hay en un pedido
 		List<DetallePedido> listaDetallePedido = detallePedidoServicio.getDetalleByIDPedido(pedido.getId());
-		//Esto sirve para sacar el nombre de los productos que hay en el detalle de los pedidos  
-		//Se saca una lista de todos los productos que hay
+		// Esto sirve para sacar el nombre de los productos que hay en el detalle de los
+		// pedidos
+		// Se saca una lista de todos los productos que hay
 		List<Producto> listaProductos = productoServicio.getListaProductos();
-		//Se crea una lista donde se van a almacenar todos los ids de productos que hay en un detalle de producto
+		// Se crea una lista donde se van a almacenar todos los ids de productos que hay
+		// en un detalle de producto
 		ArrayList<Integer> listadeIdsProductoEnDetallePedido = new ArrayList();
-		//Se recorre la lista de las linas que hay en un pedido
-		//y se guardan los ids de los productos de cada linea en un arraylist
+		// Se recorre la lista de las linas que hay en un pedido
+		// y se guardan los ids de los productos de cada linea en un arraylist
 		for (DetallePedido detalle : listaDetallePedido) {
 			listadeIdsProductoEnDetallePedido.add(detalle.getId_producto());
 		}
-		//Se crea un hashmap donde se guarda el id del producto que esta en el detalle del producto y el nombre de producto de la tabla producto
-		//Se pasa como parametro la lista de los ids producto que estan en en el detalle de producto
-		HashMap<Integer, String> listaIdProductoEnDetalleNombreProducto = productoServicio.listadeproductosids(listadeIdsProductoEnDetallePedido);
-
+		// Se crea un hashmap donde se guarda el id del producto que esta en el detalle
+		// del producto y el nombre de producto de la tabla producto
+		// Se pasa como parametro la lista de los ids producto que estan en en el
+		// detalle de producto
+		HashMap<Integer, String> listaIdProductoEnDetalleNombreProducto = productoServicio
+				.listadeproductosids(listadeIdsProductoEnDetallePedido);
 
 		// Get keys and values
 		for (Map.Entry<Integer, String> entry : listaIdProductoEnDetalleNombreProducto.entrySet()) {
@@ -155,17 +193,14 @@ public class PerfilController {
 			String v = entry.getValue();
 			System.out.println("Key: " + k + ", Value: " + v);
 		}
-		for(String key : listaIdProductoEnDetalleNombreProducto.values()) {
-			System.out.println("key"+key);
-			
-    	}
-	
+		for (String key : listaIdProductoEnDetalleNombreProducto.values()) {
+			System.out.println("key" + key);
+
+		}
+
 		EscribirPDF escribirPDf = new EscribirPDF();
 		escribirPDf.escribir(pedido, listaIdProductoEnDetalleNombreProducto, listaDetallePedido);
-		return  "redirect:/perfil";
+		return "redirect:/perfil";
 	}
-	
-	
-	
-	
+
 }

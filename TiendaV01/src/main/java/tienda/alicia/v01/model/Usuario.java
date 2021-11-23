@@ -2,6 +2,7 @@ package tienda.alicia.v01.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -9,7 +10,8 @@ import javax.validation.constraints.Size;
 @Entity
 public class Usuario {
 	
-	@Id @GeneratedValue
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private int id_rol;
 	@NotBlank(message="El email es obligatorio")
@@ -25,6 +27,7 @@ public class Usuario {
 	private String localidad;
 	private String telefono;
 	private String dni;
+	private boolean activo;
 	
 	
 //	public Usuario(int id, int id_rol, String username, String password) {
@@ -63,7 +66,7 @@ public class Usuario {
 	
 	
 	public Usuario(int id, int id_rol, String email, String clave, String nombre, String apellido1, String apellido2,
-			String direccion, String provincia, String localidad, String telefono, String dni) {
+			String direccion, String provincia, String localidad, String telefono, String dni, boolean activo) {
 		super();
 		this.id = id;
 		this.id_rol = id_rol;
@@ -77,10 +80,11 @@ public class Usuario {
 		this.localidad = localidad;
 		this.telefono = telefono;
 		this.dni = dni;
+		this.activo = activo;
 	}
 
 	public Usuario(int id_rol, String email, String clave, String nombre, String apellido1, String apellido2,
-			String direccion, String provincia, String localidad, String telefono, String dni) {
+			String direccion, String provincia, String localidad, String telefono, String dni, boolean activo) {
 		super();
 		this.id = id;
 		this.id_rol = id_rol;
@@ -94,6 +98,7 @@ public class Usuario {
 		this.localidad = localidad;
 		this.telefono = telefono;
 		this.dni = dni;
+		this.activo = activo;
 		
 	}
 	
@@ -192,6 +197,12 @@ public class Usuario {
 
 	public void setDni(String dni) {
 		this.dni = dni;
+	}
+	public boolean isActivo() {
+		return activo;
+	}
+	public void setActivo(boolean activo) {
+		this.activo = activo;
 	}
 
 	

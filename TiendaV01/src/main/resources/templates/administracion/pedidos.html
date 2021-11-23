@@ -99,10 +99,10 @@
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">Id</th>
+                                           
                                             <th class="border-top-0">Estado </th>
                                             <th class="border-top-0">Fecha</th>
-                                            <th class="border-top-0">Id usuario</th>
+                                            <th class="border-top-0">usuario</th>
                                             <th class="border-top-0">Metodo pago</th>
                                             <th class="border-top-0">Num factura</th>
                                             <th class="border-top-0">Total</th>
@@ -114,15 +114,15 @@
                                     </thead>
                                     <tbody>
                                         <tr th:each="pedido : ${listaPedidos}">
-                                            <td th:text="${pedido.id}">Id</td>
+                                            <td hidden th:text="${pedido.id}">Id</td>
                                             <td th:text="${pedido.estado}">estado</td>
                                             <td th:text="${pedido.fecha}">fecha</td>
-                                            <td th:text="${pedido.id_usuario}">id usuario</td>
+                                            <td th:text="${nombreusuario.get(pedido.id_usuario)}">id usuario</td>
                                             <td th:text="${pedido.metodo_pago}">metodo pago</td>
                                             <td th:text="${pedido.num_factura}">num facutura</td>
                                             <td th:text="${pedido.total}">total</td>
-                                            <td><a th:href="@{/administracion/pedidos/enviarpedido/}+${pedido.id}">Enviar</a></td>
-                                            <td th:if="${idrol} == 1"><a th:href="@{/administracion/pedidos/cancelarpedido/}+${pedido.id}">Cancelar </a></td>
+                                            <td th:if="${pedido.estado} == pendiente"><a th:href="@{/administracion/pedidos/enviarpedido/}+${pedido.id}">Enviar</a></td>
+                                            <td th:if="${idrol} == 1 and ${pedido.estado} == pendiente or ${pedido.estado} == 'en cancelacion'"><a th:href="@{/administracion/pedidos/cancelarpedido/}+${pedido.id}">Cancelar </a></td>
                                             <td th:if="${idrol} == 1"><a th:href="@{/administracion/productos/deleteproducto/}+${pedido.id}">Eliminar</a></td>
                                         </tr>
                                     </tbody>
@@ -152,8 +152,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

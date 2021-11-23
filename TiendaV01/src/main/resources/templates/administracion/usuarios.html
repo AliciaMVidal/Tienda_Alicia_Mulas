@@ -115,8 +115,8 @@
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">Id</th> 
-                                            <th class="border-top-0">Id Rol</th>
+                                            
+                                            <th class="border-top-0">Rol</th>
                                             <th class="border-top-0">Email</th>
                                             <th class="border-top-0">Nombre</th>
                                             <th class="border-top-0">Apellido</th>
@@ -130,8 +130,8 @@
                                     </thead>
                                     <tbody>
                                         <tr th:each="usuario : ${listaUsuarios}">
-                                            <td th:text="${usuario.id}">Id</td>
-                                            <td th:text="${usuario.id_rol}"></td>
+                                            <td th:text="${usuario.id}" hidden>Id</td>
+                                            <td th:text="${nombrerol.get(usuario.id_rol)}">Rol</td>
                                             <td th:text="${usuario.email}">email</td>
                                             <td th:text="${usuario.nombre}">nombre</td>
                                             <td th:text="${usuario.apellido1}">nombre</td>
@@ -142,6 +142,8 @@
                                             <td th:text="${usuario.telefono}">nombre</td>
                                             <td th:text="${usuario.dni}">nombre</td>
                                             <td ><a th:href="@{/administracion/usuarios/editusuario/}+${usuario.id}">Editar</a></td>
+                                            <td th:if="${usuario.activo} == true"><a th:href="@{/administracion/usuarios/desactivarusuario/}+${usuario.id}">Desactivar</a></td>
+                                            <td th:if="${usuario.activo} == false"><a th:href="@{/administracion/usuarios/activarusuario/}+${usuario.id}">Activar</a></td>
                                             <td th:if="${idrol} == 1"><a th:href="@{/administracion/usuarios/deleteusuario/}+${usuario.id}">Eliminar</a></td>
                                         </tr>
                                     </tbody>
@@ -171,8 +173,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

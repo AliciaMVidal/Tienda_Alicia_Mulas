@@ -15,6 +15,8 @@
 	<link th:href="@{../menusuperior/css/bootstrap.min.css}" rel="stylesheet">
     <link rel="stylesheet" th:href="@{../menusuperior/css/owl.carousel.min.css}">
       <link rel="stylesheet" th:href="@{../css/vistaproducto.css}">
+      
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>Inicio</title>
 
 
@@ -71,15 +73,44 @@
 					</div>
 					<div class="details col-md-6">
 						<h3 class="product-title" th:text="${producto.nombre}">men's shoes fashion</h3>
-						<div class="rating">
-							<div class="stars">
+						<div class="rating" th:if="${tieneValoraciones} == true">
+							
+							<div class="stars" th:if="${valoracionMedia} > 1 and ${valoracionMedia} < 2">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<div class="stars" th:if="${valoracionMedia} > 2 and ${valoracionMedia} < 3">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<div class="stars" th:if="${valoracionMedia} > 3 and ${valoracionMedia} < 4">
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star checked"></span>
 								<span class="fa fa-star"></span>
 								<span class="fa fa-star"></span>
 							</div>
-							<span class="review-no"></span>
+							<div class="stars" th:if="${valoracionMedia} > 4 and ${valoracionMedia} < 5">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked" ></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<div class="stars" th:if="${valoracionMedia} == 5">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked" ></span>
+								<span class="fa fa-star checked"></span>
+							</div>
+							<span class="review-no" th:text="${cantidadValoraciones}+' valoraciones'">Numero de reviews</span>
 						</div>
 						<p class="product-description" th:text="${producto.descripcion}">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
 						<h4 class="price">Precio: <span th:text="${producto.precio}+€">$180</span></h4>
@@ -93,6 +124,60 @@
 				</div>
 			</div>
 		</div>
+		<div class="card">
+                <div class="row d-flex">
+                   <div th:each="valoracion : ${listaValoraciones}">
+                    <div class="d-flex flex-column" >
+                        <h3 class="mt-2 mb-0" th:text="${nombreUsuario.get(valoracion.id_Usuario)}">Nombre de usuario</h3>
+                      
+                            <p  th:if="${valoracion.valoracion} > 1 and ${valoracion.valoracion} < 2"class="text-left"><span class="text-muted" th:text="${valoracion.valoracion}" >4.0</span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                             <span class="fa fa-star "></span></p>
+                        
+                            <p th:if="${valoracion.valoracion} > 2 and ${valoracion.valoracion} < 3" class="text-left"><span class="text-muted" th:text="${valoracion.valoracion}" >4.0</span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                             <span class="fa fa-star "></span></p>
+                       
+                       
+                            <p th:if="${valoracion.valoracion} > 3 and ${valoracion.valoracion} < 3.9" class="text-left"><span class="text-muted" th:text="${valoracion.valoracion}" >4.0</span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                             <span class="fa fa-star "></span></p>
+                      
+                       
+                            <p class="text-left"  th:if="${valoracion.valoracion} >= 4 and ${valoracion.valoracion} < 4.9"><span class="text-muted" th:text="${valoracion.valoracion}" >4.0</span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star "></span></p>
+                        
+                            <p class="text-left" th:if="${valoracion.valoracion} >= 5"><span class="text-muted" th:text="${valoracion.valoracion}" >4.0</span> 
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked "></span></p>
+                        
+                    </div>
+                    <div class="row text-left">
+                  
+                    <p class="content" th:text="${valoracion.comentario}">Comentario.</p>
+                </div>
+                </div>
+                </div>
+                
+              
+            </div>
+		
 	</div>
   </div>
 

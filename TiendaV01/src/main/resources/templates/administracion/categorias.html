@@ -111,18 +111,21 @@
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">Id</th>
+                                            
                                             <th class="border-top-0">Nombre</th>
-                                            <th class="border-top-0">Descripcion</th>
+                                            <th class="border-top-0">Descripción</th>
+                                            <th class="border-top-0"></th>
                                           
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr th:each="categoria : ${listaCategorias}">
-                                            <td th:text="${categoria.id}">Id</td>
+                                            
                                             <td th:text="${categoria.nombre}">Nombr</td>
                                             <td th:text="${categoria.descripcion}">Cotnraseña</td>
+                                            <td><a th:href="@{/administracion/categorias/editcategoria/}+${categoria.id}">Editar</a></td>
+                                            
 
                                         </tr>
                                     </tbody>
@@ -152,8 +155,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

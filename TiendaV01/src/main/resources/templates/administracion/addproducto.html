@@ -68,14 +68,7 @@
                         <h4 class="page-title">Añadir producto</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <div class="d-md-flex">
-                            <ol class="breadcrumb ms-auto">
-                                <li><a href="#" class="fw-normal">Dashboard</a></li>
-                            </ol>
-                            <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
-                                class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
-                                to Pro</a>
-                        </div>
+                      
                     </div>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -101,7 +94,7 @@
                             <div class="card-body">
                                 <form class="form-horizontal form-material" th:action="@{/administracion/productos/addproducto/submit}" th:object="${producto}" method="post">
                                    
-                                   	  
+                                   	   <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Categoria del producto</label>
                                         <div class="col-md-12 border-bottom p-0">
                                          <select class="form-control search-slt"  name="id_categoria"  id="id_categoria">
@@ -112,6 +105,19 @@
        								th:text="${categoria.nombre}"></option>
                                
                             </select> 
+                            </div>
+                                	   <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Proveedor del producto</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                         <select class="form-control search-slt"  name="id_proveedor"  id="id_proveedor">
+                                <option 
+    							    th:each="proveedor : ${listaProveedores}"
+        							th:value="${proveedor.id}" 
+        							th:field="*{id_proveedor}"
+       								th:text="${proveedor.nombre}"></option>
+                               
+                            </select> 
+                            </div>
                                         
                                            
                                     </div>
@@ -142,20 +148,7 @@
                                                 class="form-control p-0 border-0" th:field="*{stock}">
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-md-12 p-0">Fecha de alta</label>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <input type="date"  placeholder="Stock" name="fecha_alta" id="fecha_alta"
-                                                class="form-control p-0 border-0" th:field="*{fecha_alta}" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label class="col-md-12 p-0">Fecha de baja</label>
-                                        <div class="col-md-12 border-bottom p-0">
-                                            <input type="date"  placeholder="Stock" name="fecha_baja" id="fecha_baja"
-                                                class="form-control p-0 border-0" th:field="*{fecha_baja}" value="2022-11-11">
-                                        </div>
-                                    </div>
+                                    
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Impuesto</label>
                                         <div class="col-md-12 border-bottom p-0">
@@ -193,8 +186,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

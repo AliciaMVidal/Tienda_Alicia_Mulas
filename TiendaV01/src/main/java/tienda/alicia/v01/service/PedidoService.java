@@ -26,9 +26,9 @@ public class PedidoService {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String formattedDate = simpleDateFormat.format(date);
 		java.sql.Date date1 = java.sql.Date.valueOf(formattedDate);
-		Pedido p = new Pedido(4, date1, "paypal" , "pendiente" , "factura" , 31.99);
+		Pedido p = new Pedido(4, date1, "paypal" , "pendiente" , "factura" , 45.15);
 		pedidoRepository.save(p);
-		p = new Pedido(4, date1, "tarjeta" , "enviado" , "factura" , 54.23);
+		p = new Pedido(4, date1, "tarjeta" , "pendiente" , "factura" , 61.24);
 		pedidoRepository.save(p);
 		
 	}

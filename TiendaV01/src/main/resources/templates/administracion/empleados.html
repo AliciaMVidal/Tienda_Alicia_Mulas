@@ -64,7 +64,7 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Administración de usuarios</h4>
+                        <h4 class="page-title">Administración de empleados</h4>
                     </div>
                    
                 </div>
@@ -111,8 +111,8 @@
                                 <table class="table text-nowrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">Id</th> 
-                                            <th class="border-top-0">Id Rol</th>
+                                            
+                                            <th class="border-top-0">Rol</th>
                                             <th class="border-top-0">Email</th>
                                             <th class="border-top-0">Nombre</th>
                                             <th class="border-top-0">Apellido</th>
@@ -126,8 +126,8 @@
                                     </thead>
                                     <tbody>
                                         <tr th:each="usuario : ${listaEmpleados}">
-                                            <td th:text="${usuario.id}">Id</td>
-                                            <td th:text="${usuario.id_rol}"></td>
+                                            <td hidden th:text="${usuario.id}">Id</td>
+                                            <td th:text="${nombrerol.get(usuario.id_rol)}"></td>
                                             <td th:text="${usuario.email}">email</td>
                                             <td th:text="${usuario.nombre}">nombre</td>
                                             <td th:text="${usuario.apellido1}">nombre</td>
@@ -138,7 +138,9 @@
                                             <td th:text="${usuario.telefono}">nombre</td>
                                             <td th:text="${usuario.dni}">nombre</td>
                                             <td ><a th:href="@{/administracion/empleados/editempleado/}+${usuario.id}">Editar</a></td>
-                                            <td><a th:href="@{/administracion/usuarios/deleteusuario/}+${usuario.id}">Eliminar</a></td>
+                                            <td th:if="${usuario.activo} == true"><a th:href="@{/administracion/empleados/desactivarempleado/}+${usuario.id}">Desactivar</a></td>
+                                            <td th:if="${usuario.activo} == false"><a th:href="@{/administracion/empleados/activarempleado/}+${usuario.id}">Activar</a></td>
+                                            <td><a th:href="@{/administracion/empleados/deleteempleado/}+${usuario.id}">Eliminar</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -167,8 +169,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

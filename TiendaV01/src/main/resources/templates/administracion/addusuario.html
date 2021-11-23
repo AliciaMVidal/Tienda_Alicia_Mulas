@@ -70,17 +70,10 @@
             <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Profile page</h4>
+                        <h4 class="page-title">Crear usuario</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-                        <div class="d-md-flex">
-                            <ol class="breadcrumb ms-auto">
-                                <li><a href="#" class="fw-normal">Dashboard</a></li>
-                            </ol>
-                            <a href="https://www.wrappixel.com/templates/ampleadmin/" target="_blank"
-                                class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Upgrade
-                                to Pro</a>
-                        </div>
+                      
                     </div>
                 </div>
                 <!-- /.col-lg-12 -->
@@ -109,10 +102,16 @@
                                     <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Email</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="email" placeholder="email"
+                                            <input type="email" placeholder="Email"
                                                 class="form-control p-0 border-0" id="email" name="email" th:field="*{email}"> </div>
                                     </div>
                                       <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Clave</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="password" placeholder="Contraseña"
+                                                class="form-control p-0 border-0" id="clave" name="clave" th:field="*{clave}"> </div>
+                                    </div>
+                                      <div class="form-group mb-4" hidden>
                                         <label class="col-md-12 p-0">Id Rol</label>
                                         <div class="col-md-12 border-bottom p-0" th:if="${idrol} == 1">
                                             <input type="text" placeholder="Rol" class="form-control p-0 border-0" name="id_rol" id="id_rol" value="3">
@@ -120,6 +119,9 @@
                                         <div class="col-md-12 border-bottom p-0" th:if="${idrol} == 2">
                                             <input type="text" placeholder="Rol" class="form-control p-0 border-0" name="id_rol" id="id_rol" value="3" readonly>
                                         </div>
+                                    </div>
+                                    <div class="form-group mb-4" hidden>
+                                    	 <input type="text" placeholder="Rol" class="form-control p-0 border-0" name="activo" id="activo" value="TRUE"  th:field="*{activo}" >
                                     </div>
                                     <div class="form-group mb-4">
                                         <label for="example-email" class="col-md-12 p-0">Nombre</label>
@@ -169,12 +171,12 @@
                                      <div class="form-group mb-4">
                                         <label class="col-md-12 p-0">Dni</label>
                                         <div class="col-md-12 border-bottom p-0">
-                                            <input type="text" placeholder="dni" class="form-control p-0 border-0" name="dni" id="dni"  th:field="*{dni}">
+                                            <input type="text" placeholder="Dni" class="form-control p-0 border-0" name="dni" id="dni"  th:field="*{dni}">
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
                                         <div class="col-sm-12">
-                                            <button class="btn btn-success">Guardar usuario</button>
+                                            <button class="btn btn-success">Crear usuario</button>
                                         </div>
                                     </div>
                                 </form>
@@ -201,8 +203,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+           <footer th:replace="/administracion/fragmentos/footer::footer">
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

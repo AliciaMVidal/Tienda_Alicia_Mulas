@@ -1,6 +1,8 @@
 package tienda.alicia.v01.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,10 +17,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import tienda.alicia.v01.model.Categoria;
 import tienda.alicia.v01.model.Configuracion;
 import tienda.alicia.v01.model.OpcionesMenu;
 import tienda.alicia.v01.model.Pedido;
 import tienda.alicia.v01.model.Producto;
+import tienda.alicia.v01.model.Proveedor;
 import tienda.alicia.v01.model.Usuario;
 import tienda.alicia.v01.service.ConfiguracionService;
 import tienda.alicia.v01.service.OpcionesMenuService;
@@ -46,6 +50,17 @@ public class AdministracionPedidoController {
 	@GetMapping("")
 	public String inicio(Model model, HttpSession sesion) {
 		model.addAttribute("listaPedidos", pedidoServicio.getListaPedidos());
+		List<Pedido> listaPedidos = pedidoServicio.getListaPedidos();
+		List<Usuario> listaUsuarios = usuarioServicio.getListaUsuarios();
+		ArrayList<Integer> listadeIdsUsuariosEnPedidos = new ArrayList();
+		
+		for (Pedido pedido : listaPedidos) {
+			listadeIdsUsuariosEnPedidos.add(pedido.getId_usuario());
+		}
+		HashMap<Integer, String> listaIdsUsuarioEnPedido = usuarioServicio.listaUsuariosIds(listadeIdsUsuariosEnPedidos);
+		// Se pasa como atributo a la vista
+		
+		model.addAttribute("nombreusuario", listaIdsUsuarioEnPedido);
 		// Coger el usuario que quiere va a hacer esto
 		Usuario usuario;
 		String email = (String) sesion.getAttribute("sesion");

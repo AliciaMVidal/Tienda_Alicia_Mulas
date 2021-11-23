@@ -1,6 +1,7 @@
 package tienda.alicia.v01.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tienda.alicia.v01.model.Producto;
+import tienda.alicia.v01.model.Proveedor;
 import tienda.alicia.v01.model.Usuario;
 import tienda.alicia.v01.repository.UsuarioRepository;
 
@@ -23,17 +25,15 @@ public class UsuarioService {
 	@PostConstruct
 	public void cargarUsuarios() {
 		
-		Usuario u = new Usuario(1, "alicia@tienda.es", "MTIzNA==", "Alicia", "Mulas", "Vidal", "Camiño Víctor, 73, 67º D", "Zamora", "Zamora", "98534756", "9845637U");
+		Usuario u = new Usuario(1, "alicia@tienda.es", "MTIzNA==", "Alicia", "Mulas", "Vidal", "Camiño Víctor, 73, 67º D", "Zamora", "Zamora", "98534756", "9845637U", true);
 		usuarioRepository.save(u);
-		u = new Usuario(1, "admin@tienda.es", "MTIzNA==", "Claudia", "Bladeras", "García", "Rúa Raquel, 245, 54º F", "Ourense","Ourense", "67823568", "3455635L");
+		u = new Usuario(1, "admin@tienda.es", "MTIzNA==", "Claudia", "Bladeras", "García", "Rúa Raquel, 245, 54º F", "Ourense","Ourense", "67823568", "3455635L", true);
 		usuarioRepository.save(u);
-		u = new Usuario(2, "empleado@tienda.es", "MTIzNA==", "Pedro", "Torre", "Alvarado", "Calle Moral, 379, 56º D", "Os Soriano del Vallès", "Barcelona", "567984531","1287354T");
+		u = new Usuario(2, "empleado@tienda.es", "MTIzNA==", "Pedro", "Torre", "Alvarado", "Calle Moral, 379, 56º D", "Os Soriano del Vallès", "Barcelona", "567984531","1287354T", true);
 		usuarioRepository.save(u);
-		u = new Usuario(3, "cliente@correo.es", "MTIzNA==", "Julia", "Gracía", "Fernandez", "Ronda Jana, 1, 0º C", "La Valles del Barco", "Avila", "28328322", "21394858L");
+		u = new Usuario(3, "cliente@correo.es", "MTIzNA==", "Julia", "Gracía", "Fernandez", "Ronda Jana, 1, 0º C", "La Valles del Barco", "Avila", "28328322", "21394858L", true);
 		usuarioRepository.save(u);
-		u = new Usuario(3, "cliente2@correo.es", "MTIzNA==", "Asier", "Quezada", "Tercero", "Carrer Héctor, 342, 0º A", "Alaniz del Mirador", "Valladolud", "679258645", "9876348A");
-
-
+		u = new Usuario(3, "cliente2@correo.es", "MTIzNA==", "Asier", "Quezada", "Tercero", "Carrer Héctor, 342, 0º A", "Alaniz del Mirador", "Valladolud", "679258645", "9876348A", true);
 		usuarioRepository.save(u);
 	}
 	
@@ -98,7 +98,28 @@ public class UsuarioService {
 		return usuario;
 	}
 	
+	public HashMap<Integer, String> listaUsuariosIds(ArrayList listadeIdsUsuariosEnPedidos) {
+		// Se crea una lista categorias cuya id esten en la tabla Productos
+		List<Usuario> listaObjetosUsuarioenPedido = usuarioRepository.findByIdIn(listadeIdsUsuariosEnPedidos);
+		// Se crea un HashMap con la relacion de producto.id_categoria y categoria.id
+		HashMap<Integer, String> hmRelacionUsuarioYPedido = new HashMap<Integer, String>();
+		// Se recorren los objetos para sacar el id.categoria y guardarlo en el hashmap
+		for (Usuario usuario : listaObjetosUsuarioenPedido) {
+			hmRelacionUsuarioYPedido.put(usuario.getId(), usuario.getEmail());
+		}
+		return hmRelacionUsuarioYPedido;
+	}
 	
-	
+	public HashMap<Integer, String> listaUsuariosIdsEnValoraciones(ArrayList listadeIdsUsuariosEnValoraciones) {
+		// Se crea una lista categorias cuya id esten en la tabla Productos
+		List<Usuario> listaObjetosUsuarioenValoracion = usuarioRepository.findByIdIn(listadeIdsUsuariosEnValoraciones);
+		// Se crea un HashMap con la relacion de producto.id_categoria y categoria.id
+		HashMap<Integer, String> hmRelacionUsuarioYValoracion = new HashMap<Integer, String>();
+		// Se recorren los objetos para sacar el id.categoria y guardarlo en el hashmap
+		for (Usuario usuario : listaObjetosUsuarioenValoracion) {
+			hmRelacionUsuarioYValoracion.put(usuario.getId(), usuario.getNombre());
+		}
+		return hmRelacionUsuarioYValoracion;
+	}
 
 }

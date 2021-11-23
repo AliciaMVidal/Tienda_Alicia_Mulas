@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Style -->
+
+    <link rel="stylesheet" th:href="@{../../menusuperior/css/style.css}">
+    <link rel="stylesheet" th:href="@{../../menusuperior/fonts/icomoon/style.css}">
+    <link th:href="@{../../menusuperior/css/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../../menusuperior/css/owl.carousel.min.css}">
+    <title>Inicio</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{../../css/bootstrap.min.css}" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <main>
+        <div th:replace="/fragmentos/cabecera::menusuperior"></div>
+
+
+
+       
+        <div class="album py-5 bg-light">
+
+            <div class="container">
+                <div class="row breadcrumbs">
+                    <div class="col" role="navigation" aria-label="Breadcrumb">
+
+                    </div>
+                </div>
+
+                <h1 class="page-title" th:text="'Valorar: '+${nombreProducto}"> Valorar producto</h1>
+           
+            <div class="container mt-5 mb-5 pb-5">
+                <div class="row justify-content-center">
+                 <div class="col-sm-8 col-md-6">
+                <div class="card">
+                   
+                 
+              <div class="card-body">
+                                    <form th:action="@{/perfil/valorarproducto/submit}" th:object="${valoracion}" class="edit-profile-form" method="POST">
+                                      
+                                      
+                                      	<div class="form-group required" hidden>
+                                            <label class="form-control-label" for="firstName">id </label>
+                                            <input type="text" class="form-control"  id="id_Producto" name="id_Producto" 
+                                            th:text="${idproducto}" required aria-required="true" th:field="*{id_Producto}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                      	<div class="form-group required">
+                                            <label class="form-control-label" for="firstName"> Puntuacion al producto (1-5) </label>
+                                            <input type="text" class="form-control" id="valoracion" name="valoracion" required aria-required="true" th:field="*{valoracion}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="form-group required">
+                                            <label class="form-control-label" for="firstName"> Comentario sobre el producto </label>
+                                            <input type="text" class="form-control" id="comentario" name="comentario" required aria-required="true" th:field="*{comentario}">
+                                            <div class="invalid-feedback"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <a th:href="@{/perfil}" class="btn btn-block btn-secondary">Cancelar</a>
+                                            </div>
+
+                                            <div class="col">
+                                                <button type="submit" name="save" class="btn btn-save btn-block btn-primary">Guardar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+                    
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+    </main>
+
+    <footer th:replace="/fragmentos/footer::pie"></footer>
+
+
+    <script th:src="@{../../menusuperior/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{../../menusuperior/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{../../menusuperior/js/popper.min.js}"></script>
+    <script th:src="@{../../menusuperior/js/jquery.sticky.js}"></script>
+    <script th:src="@{../../menusuperior/js/main.js}"></script>
+
+
+
+</body>
+
+</html>
